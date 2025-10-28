@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+    <!--=============== REMIXICONS ===============-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <link rel="shortcut icon" href="assets/img/web-icon.png" type="x-icon" />
+    <title>Forgach Rebeka - Portfolio</title>
+</head>
+
+<body class="page-contact">
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="index.html" class="nav-logo">
+                <span class="logo-drop">
+                    <img src="assets/img/logo.png" />
+                </span>
+            </a>
+
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link active-link">Contact</a>
+                    </li>
+                </ul>
+
+                <!-- Close button -->
+                <div class="nav-close" id="nav-close">
+                    <i class="ri-close-line"></i>
+                </div>
+            </div>
+
+            <div class="nav-actions">
+                <div class="nav-toggle" id="nav-toggle">
+                    <i class="ri-menu-line"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!--==================== MAIN ====================-->
+    <main class="main">
+        <!--==================== CONTACT ====================-->
+        <section class="contact section">
+            <div class="contact-top">
+                <h2 class="section-title"><span>REACH OUT!</span></h2>
+                <p class="contact-description">Let’s make something together</p>
+            </div>
+
+            <div class="contact-container container">
+                <form action="https://formsubmit.co/60bcd629e01cad68d995683286239ce7" method="POST" class="contact-form"
+                    novalidate>
+                    <!-- Name -->
+                    <div class="field" id="field-name">
+                        <input class="form-input" type="text" id="name" name="name" placeholder="Name"
+                            autocomplete="off" />
+                        <div class="error-txt" aria-live="polite">Name can't be blank</div>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="field" id="field-email">
+                        <input class="form-input" type="email" id="email" name="email" placeholder="Email"
+                            autocomplete="off" />
+                        <div class="error-txt email" aria-live="polite">Email address can't be blank</div>
+                    </div>
+
+                    <!-- Message -->
+                    <div class="field field--textarea" id="field-message">
+                        <textarea class="form-input" id="message" name="message" rows="6" placeholder="Message"
+                            autocomplete="off"></textarea>
+                        <div class="error-txt" aria-live="polite">Message can't be blank</div>
+                    </div>
+
+                    <!-- Submit -->
+                    <button type="submit" class="pop-btn">
+                        <span class="pop-icon" aria-hidden="true">
+                            <img src="assets/img/contact/send-icon.png" alt="" />
+                        </span>
+                        <span class="pop-label">Send!</span>
+                    </button>
+                </form>
+
+                <!-- Success panel -->
+                <div id="contact-success" class="contact-success" aria-hidden="true" style="display:none;">
+                    <h3>Thanks — message sent!</h3>
+                    <p>I'll get back to you as soon as possible</p>
+                    <button id="success-close" class="pop-btn">Close</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!--========== SCROLL UP ==========-->
+    <a href="" class="scrollup" id="scroll-up">
+        <i class="ri-arrow-up-line"></i>
+    </a>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+</body>
+
+</html>
