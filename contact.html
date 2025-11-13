@@ -2,36 +2,39 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!--=============== FAVICON ===============-->
-    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!--=============== REMIXICONS ===============-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" />
+
+    <!--=============== GOOGLE FONTS ===============-->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_forward" />
+
+    <!--=============== SWIPER ===============-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
 
     <!--=============== CSS ===============-->
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/styles.css" />
 
     <link rel="shortcut icon" href="assets/img/web-icon.png" type="x-icon" />
-    <title>Forgach Rebeka - Portfolio</title>
+    <title>Evelina Graumane - Portfolio</title>
 </head>
 
-<body class="page-contact">
+<body>
+    <div class="cursor"></div>
     <!--==================== HEADER ====================-->
     <header class="header" id="header">
         <nav class="nav container">
             <a href="index.html" class="nav-logo">
-                <span class="logo-drop">
-                    <img src="assets/img/logo.png" />
-                </span>
+                <img src="assets/img/Logo.svg" alt="Logo" />
             </a>
 
             <div class="nav-menu" id="nav-menu">
                 <ul class="nav-list">
                     <li class="nav-item">
-                        <a href="index.html" class="nav-link">Portfolio</a>
+                        <a href="index.html" class="nav-link ">Portfolio</a>
                     </li>
                     <li class="nav-item">
                         <a href="about.html" class="nav-link">About</a>
@@ -60,8 +63,7 @@
         <!--==================== CONTACT ====================-->
         <section class="contact section">
             <div class="contact-top">
-                <h2 class="section-title"><span>REACH OUT!</span></h2>
-                <p class="contact-description">Let’s make something together</p>
+                <h2 class="section-title"><span>Don't be shy and reach out!</span></h2>
             </div>
 
             <div class="contact-container container">
@@ -89,12 +91,12 @@
                     </div>
 
                     <!-- Submit -->
-                    <button type="submit" class="pop-btn">
-                        <span class="pop-icon" aria-hidden="true">
-                            <img src="assets/img/contact/send-icon.png" alt="" />
-                        </span>
-                        <span class="pop-label">Send!</span>
-                    </button>
+                    <a class="btn" href="#" aria-label="Lovely button">
+                        <span class="text">Submit</span>
+                        <button class="simple-button material-symbols-rounded" aria-label="Open">
+                            arrow_forward
+                        </button>
+                    </a>
                 </form>
 
                 <!-- Success panel -->
@@ -104,6 +106,12 @@
                     <button id="success-close" class="pop-btn">Close</button>
                 </div>
             </div>
+
+            <div class='eyes'>
+                <div class='eye'></div>
+                <div class='eye'></div>
+            </div>
+
         </section>
     </main>
 
@@ -113,8 +121,8 @@
     </a>
 
     <!--=============== MAIN JS ===============-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
 </body>
 
 </html>

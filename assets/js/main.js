@@ -65,10 +65,10 @@ document.addEventListener('mousemove', e => {
         f.className = "firefly";
 
         // make them move & pulse slower
-        const rotateDur = rand(18, 28).toFixed(2) + "s";   // rotation speed (slower)
-        const flashDur = rndInt(10000, 18000) + "ms";      // flash slower
-        const flashDelay = rndInt(2000, 12000) + "ms";     // longer random delay between flashes
-        const travelDur = rndInt(220, 380) + "s";          // much slower overall movement
+        const rotateDur = rand(28, 45).toFixed(2) + "s";    // VERY slow rotation
+        const flashDur = rndInt(14000, 28000) + "ms";        // slow glow
+        const flashDelay = rndInt(8000, 20000) + "ms";       // long pause between flashes
+        const travelDur = rndInt(400, 900) + "s";            // super slow drifting
 
         // per-firefly keyframes for movement
         const kfName = `firefly-move-${i}`;
@@ -159,6 +159,80 @@ new Swiper('.card-wrapper', {
     }
 });
 
+/*=============== ABOUT ME BUTTONS ===============*/
+(function () {
+    const circles = Array.from(document.querySelectorAll('.hobby-circles .circle'));
+    const overlayImg = document.querySelector('.overlayImage');
+
+    // Start with no selection
+    clearSelection();
+    circles.forEach(b => {
+        b.classList.remove('active');
+        b.setAttribute('aria-pressed', 'false');
+    });
+
+    circles.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const isActive = btn.classList.contains('active');
+            if (isActive) {
+                // Clicking the active one -> unselect
+                clearSelection();
+                btn.classList.remove('active');
+                btn.setAttribute('aria-pressed', 'false');
+                return;
+            }
+
+            // Deactivate others
+            circles.forEach(b => {
+                b.classList.remove('active');
+                b.setAttribute('aria-pressed', 'false');
+            });
+
+            // Activate this one
+            btn.classList.add('active');
+            btn.setAttribute('aria-pressed', 'true');
+            applySelection(btn);
+        });
+    });
+
+    function applySelection(btn) {
+        const src = btn.getAttribute('data-overlay');
+        if (src) {
+            const img = new Image();
+            img.onload = () => {
+                overlayImg.src = src;
+                overlayImg.classList.add('is-visible');
+            };
+            img.src = src;
+        }
+    }
+
+    function clearSelection() {
+        if (!overlayImg) return;
+        overlayImg.removeAttribute('src');
+        overlayImg.classList.remove('is-visible');
+    }
+})();
+
+/*=============== EYES ===============*/
+
+document.addEventListener('DOMContentLoaded', () => {
+    const eyes = document.querySelectorAll('.eye');
+
+    document.addEventListener('mousemove', (event) => {
+        eyes.forEach((eye) => {
+            const rect = eye.getBoundingClientRect();
+            const x = rect.left + rect.width / 2;
+            const y = rect.top + rect.height / 2;
+
+            // Match original CodePen math (note the swapped X/Y in atan2)
+            const rad = Math.atan2(event.clientX - x, event.clientY - y);
+            const rot = (rad * (180 / Math.PI) * -1) + 180;
+
+            eye.style.transform = `rotate(${rot}deg)`;
+        });
+    });
+});
 
 /*=============== SEND MESSAGE ===============*/
 (function () {

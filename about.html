@@ -69,6 +69,8 @@
             <div class="about-me container grid">
                 <div class="my-image">
                     <img class="mainImage" src="assets/img/about/me.jpg" alt="My Picture" />
+                    <!-- Transparent PNG overlay goes here -->
+                    <img class="overlayImage" alt="" aria-hidden="true" />
                 </div>
 
                 <div class="about-text">
@@ -76,26 +78,36 @@
                         <h1 class="about-title">Hey, I'm Evelīna</h1>
                         <p class="about-desc">
                             I’m a logical thinker who loves taking my sweet time to craft things carefully and make
-                            every
-                            project
-                            the best it can be. I’m hardworking, determined, and always aiming high — quality and growth
-                            are
-                            what drive me forward.
+                            every project the best it can be. I’m hardworking, determined, and always aiming high —
+                            quality and growth are what drive me forward.
                         </p>
                         <p class="about-desc">
                             But beyond the goals and deadlines, I love spending time outdoors, laughing at silly
-                            stories,
-                            and simply enjoying good moments with people around me.
+                            stories, and simply enjoying good moments with people around me.
                         </p>
                     </div>
+
                     <h1 class="hobby-title">My hobbies</h1>
+
                     <!-- image selector circles -->
-                    <div class="hobby-circles">
-                        <div class="hobby-circles">
-                            <span class="circle active"><i class="fa-solid fa-camera"></i></span>
-                            <span class="circle"><i class="fa-solid fa-tree"></i></span>
-                            <span class="circle"><i class="fa-solid fa-book"></i></span>
-                        </div>
+                    <div class="hobby-circles" role="group" aria-label="Select a hobby">
+                        <button type="button" class="circle" aria-pressed="false" title="Photography"
+                            data-overlay="assets/img/about/doodle1.png">
+                            <i class="fa-solid fa-camera" aria-hidden="true"></i>
+                            <span class="sr-only">Photography</span>
+                        </button>
+
+                        <button type="button" class="circle" aria-pressed="false" title="Nature"
+                            data-overlay="assets/img/about/doodle2.png">
+                            <i class="fa-solid fa-tree" aria-hidden="true"></i>
+                            <span class="sr-only">Nature</span>
+                        </button>
+
+                        <button type="button" class="circle" aria-pressed="false" title="Reading"
+                            data-overlay="assets/img/about/doodle3.png">
+                            <i class="fa-solid fa-book" aria-hidden="true"></i>
+                            <span class="sr-only">Reading</span>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -103,6 +115,50 @@
 
         <!-- My journey -->
         <section class="journey section">
+            <div class="timeline container">
+                <div class="outer">
+                    <div class="card">
+                        <div class="info">
+                            <h3 class="title">Title 1</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                                ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="info">
+                            <h3 class="title">Title 2</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                                ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="info">
+                            <h3 class="title">Title 3</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                                ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="info">
+                            <h3 class="title">Title 4</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                                ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="info">
+                            <h3 class="title">Title 5</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                                ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
         </section>
 
@@ -142,7 +198,9 @@
         <i class="ri-arrow-up-line"></i>
     </a>
 
+
     <!--=============== MAIN JS ===============-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
 
