@@ -1,0 +1,124 @@
+{
+    "defaultProjectId": "etherlocked",
+    "projects": [
+        {
+            "id": "indexo",
+            "title": "INDEXO",
+            "timeline": "2024 – current",
+            "contributions": "UI Design, UX Design, Tester",
+            "teammates": "Reinis Vitols, Alberts Pumpurs, Martins Tuls, Anna Lipberga",
+            "backgroundVideo": "/assets/img/EtherLocked/video.mp4",
+            "logline": "Indexo Bank is a modern Latvian digital bank focused on simple, transparent financial services and smart investment solutions",
+            "tags": [
+                "Bank",
+                "App",
+                "Website"
+            ],
+            "sections": [
+                {
+                    "type": "about1",
+                    "heading": "About the project",
+                    "text": "During this project, I worked as a UI/UX designer on both the INDEXO mobile app and website, contributing to the creation and refinement of essential user experiences such as VISA+ functionality, mortgage refinancing flows, junior accounts, live promotional banners, and more. This role not only allowed me to design clear, intuitive financial journeys but also helped me deepen my understanding of how to build trustworthy digital products in a highly regulated industry."
+                },
+                {
+                    "type": "about2",
+                    "heading": "My role & responsibilities",
+                    "text": "Working in a small team of three gave us the chance to explore every stage of development...",
+                    "mainImage": "/assets/img/EtherLocked/EtherLocked-pic1.png",
+                    "galleryImages": [
+                        "/assets/img/EtherLocked/EtherLocked-pic4.png",
+                        "/assets/img/EtherLocked/EtherLocked-pic5.png"
+                    ]
+                },
+                {
+                    "type": "about3",
+                    "heading": "Gameplay & atmosphere",
+                    "text": "EtherLocked is a first-person puzzle game where players solve environmental puzzles using light...",
+                    "video": "/assets/img/EtherLocked/video.mp4",
+                    "galleryImages": [
+                        "/assets/img/EtherLocked/EtherLocked-pic6.png",
+                        "/assets/img/EtherLocked/EtherLocked-pic7.png"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "etherlocked",
+            "title": "EtherLocked",
+            "timeline": "2024 – 2025",
+            "contributions": "Developer, UX Designer, UI Designer",
+            "teammates": "Rebeka Forgach, Eliza Drazniece, Mate Forgach",
+            "backgroundVideo": "/assets/img/EtherLocked/video.mp4",
+            "logline": "EtherLocked is a first-person psychological horror puzzle game where Orion becomes trapped between dreams and reality during sleep paralysis",
+            "tags": [
+                "Puzzle game",
+                "3D",
+                "First-person"
+            ],
+            "sections": [
+                {
+                    "type": "about1",
+                    "heading": "About the project",
+                    "text": [
+                        "EtherLocked was a year-long university project and our first major game development experience as a team. We worked in a group of four — two artists, a sound designer, and me as the developer — combining our strengths to bring the concept to life. The assignment was to create a first-person puzzle game without NPCs or inventory systems, relying solely on environmental interaction to guide the player.",
+                        "At the end of the project, we were proud to receive an Honorable Mention at our university’s Demo Day, a recognition that validated our hard work and teamwork throughout the year."
+                    ],
+                    "galleryImages": [
+                        "/assets/img/EtherLocked/EtherLocked-details1.png",
+                        "/assets/img/EtherLocked/EtherLocked-details2.png",
+                        "/assets/img/EtherLocked/EtherLocked-details3.png"
+                    ]
+                },
+                {
+                    "type": "about3",
+                    "heading": "Idea & story",
+                    "text": [
+                        "We set out to create a first-person puzzle game that explores the fragile space between dreaming and waking. Our goal was to capture the feeling of a familiar room becoming eerie and distorted, pushing the player to navigate a world shaped by fear and imagination.",
+                        "The story follows Orion, a 17-year-old who becomes separated from his body during a sleep paralysis episode. With no NPCs, combat, or inventory systems, the gameplay focuses entirely on interacting with the environment through objects, sound cues, and subtle visual changes.",
+                        "As players explore the room, they uncover clues tied to Orion’s stress and self-doubt. Each puzzle is designed to be symbolic and atmospheric, guiding Orion closer to regaining control and returning to his physical body."
+                    ],
+                    "video": "/assets/img/EtherLocked/video.mp4"
+                },
+                {
+                    "type": "about2",
+                    "heading": "Game atmosphere",
+                    "text": [
+                        "The tutorial, although taking place in the same room as the main game, is intentionally light, chill, and sunny, giving players a sense of comfort before the story truly begins. In the actual game, the tone changes completely—the room becomes dark, spooky, and tense, using shadows, muted lighting, and subtle ambient effects to create an unsettling mood. To enhance the eerie feeling, we added a glitch effect to the camera, making the environment feel unstable and dreamlike.",
+                        "The main menu was kept minimal but atmospheric. A soft moving background that responds to the player's cursor helps the interface feel alive, offering a small hint of surrealism without overwhelming the player before the game starts.",
+                        "All cutscenes, animations, and end credits were created in a unified visual style. Beyond simple transitions, they serve as small storytelling moments that reveal pieces of Orion’s world and reinforce the emotional tone of the experience."
+                    ],
+                    "mainImage": "/assets/img/EtherLocked/EtherLocked-details4.png",
+                    "galleryImages": [
+                        "/assets/img/EtherLocked/EtherLocked-details5.png",
+                        "/assets/img/EtherLocked/EtherLocked-details6.png",
+                        "/assets/img/EtherLocked/EtherLocked-details7.png",
+                        "/assets/img/EtherLocked/EtherLocked-details8.png",
+                        "/assets/img/EtherLocked/EtherLocked-details9.png",
+                        "/assets/img/EtherLocked/EtherLocked-details10.png",
+                        "/assets/img/EtherLocked/EtherLocked-details11.png",
+                        "/assets/img/EtherLocked/EtherLocked-details12.png",
+                        "/assets/img/EtherLocked/EtherLocked-details13.png"
+                    ]
+                },
+                {
+                    "type": "about3",
+                    "heading": "Gameplay & mechanics",
+                    "text": [
+                        "The core mechanics revolve around object interaction, allowing players to pick up, rotate, examine, and throw items. Each interactable object provides visual feedback through hover outlines, making the environment feel responsive and alive. Larger interactions—specifically the clock and padlock—shift the camera into dedicated inspection views, giving players focused control over precise actions like rotating clock hands or selecting padlock numbers.",
+                        "Other objects run on their own independent systems. Clicking the diary opens a dedicated diary UI where players can flip through pages and track collected tickets. Doors open in the opposite direction of the player, drawers smoothly slide open or closed with a single click, and interacting with the mirror places a collected mirror piece into its correct spot. When all the mirror fragments have been found and placed, the mirror triggers the final sequence, completing the game's puzzle loop."
+                    ],
+                    "video": "/assets/img/EtherLocked/mechanics.mp4"
+                },
+                {
+                    "type": "about1",
+                    "heading": "Challenges & solutions",
+                    "text": [
+                        "The first major challenge was the planning stage—we spent nearly six months defining the story, mechanics, and puzzle structure before development even began. I didn’t expect the planning phase to take so long, but it became essential for making the rest of the project possible.",
+                        "During development, I ran into several technical difficulties. The puzzle system—connecting the diary clues, clock logic, ticket spawning, and padlock code—took a lot of trial and error to get right. The clock mechanics in particular caused problems with pivot points and rotation behavior, leading me to redesign the interaction into a more stable click-based system. UI state management was another challenge, especially handling overlaps between menus, camera transitions, and object interactions.",
+                        "Even with these obstacles, each problem taught me something valuable about structure, logic, and game flow. And in the end, it was all worth it—thanks to my supportive team, and the amount I was able to learn throughout the project."
+                    ]
+                }
+            ]
+        }
+    ]
+}

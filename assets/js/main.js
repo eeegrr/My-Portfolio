@@ -222,17 +222,27 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('mousemove', (event) => {
         eyes.forEach((eye) => {
             const rect = eye.getBoundingClientRect();
-            const x = rect.left + rect.width / 2;
-            const y = rect.top + rect.height / 2;
+            const cx = rect.left + rect.width / 2;   // eye center X
+            const cy = rect.top + rect.height / 2;   // eye center Y
 
-            // Match original CodePen math (note the swapped X/Y in atan2)
-            const rad = Math.atan2(event.clientX - x, event.clientY - y);
-            const rot = (rad * (180 / Math.PI) * -1) + 180;
+            const dx = event.clientX - cx;
+            const dy = event.clientY - cy;
 
-            eye.style.transform = `rotate(${rot}deg)`;
+            const angle = Math.atan2(dy, dx);
+
+            // how far pupil can move from center (as a fraction of eye size)
+            const maxOffset = rect.width * 0.2; // 20% of eye width, tweak if needed
+
+            const offsetX = Math.cos(angle) * maxOffset;
+            const offsetY = Math.sin(angle) * maxOffset;
+
+            // pass offsets into CSS vars used by ::after
+            eye.style.setProperty('--pupil-x', `${offsetX}px`);
+            eye.style.setProperty('--pupil-y', `${offsetY}px`);
         });
     });
 });
+
 
 /*=============== SEND MESSAGE ===============*/
 (function () {
