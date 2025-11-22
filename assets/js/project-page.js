@@ -50,6 +50,48 @@ function renderProjectPage(data) {
     // ========== HERO / INTRO ==========
     setText(".work-title", data.title);
 
+    // ===== TITLE TEXT =====
+    const titleElement = document.querySelector(".work-title");
+    if (titleElement && data.title) {
+        titleElement.textContent = data.title; // never remove the title
+    }
+
+    // ===== TITLE LINK / BUTTON LOGIC =====
+    const titleLink = document.getElementById("title-link");
+    const titleButton = document.getElementById("title-button");
+
+    if (titleLink) {
+        if (data.titleLink) {
+            // Has link → title + button are clickable
+            titleLink.href = data.titleLink;
+            titleLink.style.pointerEvents = "auto";
+
+            if (titleButton) {
+                titleButton.style.display = "grid";
+
+                // make sure button always navigates
+                titleButton.addEventListener("click", (e) => {
+                    // prevent any weird default, then follow link
+                    e.preventDefault();
+                    window.location.href = data.titleLink;
+                });
+            }
+        } else {
+            // No link → remove button, make title plain text
+            if (titleButton) titleButton.remove();
+
+            const titleContainer = titleLink.querySelector(".title-container");
+
+            if (titleContainer) {
+                // unwrap: replace <a> with inner .title-container
+                titleLink.replaceWith(titleContainer);
+            } else {
+                // fallback: keep title as plain text
+                titleLink.replaceWith(titleElement);
+            }
+        }
+    }
+
     // Background video
     const bgVideo = document.querySelector(".bg-video");
     if (bgVideo) {
@@ -96,7 +138,7 @@ function renderProjectPage(data) {
         }
     }
 
-    // ========== ABOUT SECTIONS (about-work1, 2, 3) ==========
+    // ========== ABOUT / SECTIONS ==========
     const main = document.querySelector("main.main");
     if (!main || !Array.isArray(data.sections)) return;
 
@@ -104,11 +146,13 @@ function renderProjectPage(data) {
     const templateAbout1 = document.querySelector('section[data-template="about1"]');
     const templateAbout2 = document.querySelector('section[data-template="about2"]');
     const templateAbout3 = document.querySelector('section[data-template="about3"]');
+    const templatePlayingCards = document.querySelector('section[data-template="playing-cards"]');
 
     const templates = {
         about1: templateAbout1,
         about2: templateAbout2,
-        about3: templateAbout3
+        about3: templateAbout3,
+        "playing-cards": templatePlayingCards
     };
 
     // Remove templates from DOM so we can rebuild from JSON
@@ -119,10 +163,11 @@ function renderProjectPage(data) {
     // Now generate sections from JSON
     data.sections.forEach(sectionData => {
         const type = sectionData.type;
+        const baseTemplate = templates[type];
 
-        if (!templates[type]) return; // unknown layout type, skip
+        if (!baseTemplate) return; // unknown layout type, skip
 
-        const sectionClone = templates[type].cloneNode(true);
+        const sectionClone = baseTemplate.cloneNode(true);
 
         switch (type) {
             case "about1":
@@ -134,13 +179,15 @@ function renderProjectPage(data) {
             case "about3":
                 fillAbout3(sectionClone, sectionData);
                 break;
+            case "playing-cards":
+                fillPlayingCards(sectionClone, sectionData);
+                break;
             default:
                 return;
         }
 
-        // Remove template attribute so it's treated as normal section
+        // Remove template attribute so it's treated as a normal section
         sectionClone.removeAttribute("data-template");
-
         main.appendChild(sectionClone);
     });
 }
@@ -311,6 +358,99 @@ function fillAbout3(section, data) {
             galleryWrapper?.remove();
         }
     }
+}
+
+/* ===== Layout: about-work4 ===== */
+function fillAbout4(section, data) {
+    const headingEl = section.querySelector(".about-subtitle2");
+    const textEl = section.querySelector(".about-description2");
+    const mainImage = section.querySelector(".about-picture");
+    const galleryWrapper = section.querySelector(".picture-gallery1");
+    const container = section.querySelector(".picture-gallery1 .picture-container");
+
+    if (headingEl) {
+        if (data.heading) headingEl.textContent = data.heading;
+        else headingEl.remove();
+    }
+
+    if (textEl) {
+        setRichText(textEl, data.text);
+    }
+
+    // Main side image
+    if (mainImage) {
+        if (data.mainImage) {
+            mainImage.src = data.mainImage;
+        } else {
+            mainImage.remove();
+        }
+    }
+
+    // Gallery
+    if (container) {
+        container.innerHTML = "";
+        if (Array.isArray(data.galleryImages) && data.galleryImages.length > 0) {
+            data.galleryImages.forEach((src, index) => {
+                const img = document.createElement("img");
+                img.src = src;
+                img.alt = `Screenshot ${index + 1}`;
+                img.className = "picture-img";
+                container.appendChild(img);
+            });
+        } else {
+            galleryWrapper?.remove();
+        }
+    }
+}
+
+/* ===== Layout: playing-cards ===== */
+function fillPlayingCards(section, data) {
+    const container = section.querySelector(".container");
+    if (!container) return;
+
+    // Clear template content
+    container.innerHTML = "";
+
+    if (!Array.isArray(data.groups) || data.groups.length === 0) {
+        section.remove();
+        return;
+    }
+
+    data.groups.forEach(group => {
+        const groupEl = document.createElement("div");
+        groupEl.className = "cards-group";
+
+        // Icon
+        if (group.icon) {
+            const iconImg = document.createElement("img");
+            iconImg.src = group.icon;
+            iconImg.alt = group.iconAlt || "Cards icon";
+            iconImg.className = "cards-icons";
+            groupEl.appendChild(iconImg);
+        }
+
+        // Cards gallery
+        if (Array.isArray(group.cards) && group.cards.length > 0) {
+            const galleryDiv = document.createElement("div");
+            galleryDiv.className = "cards-gallery";
+
+            const cardsContainer = document.createElement("div");
+            cardsContainer.className = "cards-container grid";
+
+            group.cards.forEach((src, index) => {
+                const img = document.createElement("img");
+                img.src = src;
+                img.alt = `Card ${index + 1}`;
+                img.className = "cards-img";
+                cardsContainer.appendChild(img);
+            });
+
+            galleryDiv.appendChild(cardsContainer);
+            groupEl.appendChild(galleryDiv);
+        }
+
+        container.appendChild(groupEl);
+    });
 }
 
 function setupNextProjectButton(allProjects, currentProject) {

@@ -4,11 +4,11 @@
         {
             "id": "indexo",
             "title": "INDEXO",
+            "titleLink": "https://indexo.lv/",
             "timeline": "2024 – current",
-            "contributions": "UI Design, UX Design, Tester",
-            "teammates": "Reinis Vitols, Alberts Pumpurs, Martins Tuls, Anna Lipberga",
-            "backgroundVideo": "/assets/img/EtherLocked/video.mp4",
-            "logline": "Indexo Bank is a modern Latvian digital bank focused on simple, transparent financial services and smart investment solutions",
+            "contributions": "UI Design, UX Design, tester",
+            "teammates": "Reinis Vitols, Alberts Pumpurs, Martins Tuls, Anna Lipenberga",
+            "backgroundVideo": "/assets/img/Indexo/indexo.mp4",
             "tags": [
                 "Bank",
                 "App",
@@ -18,27 +18,51 @@
                 {
                     "type": "about1",
                     "heading": "About the project",
-                    "text": "During this project, I worked as a UI/UX designer on both the INDEXO mobile app and website, contributing to the creation and refinement of essential user experiences such as VISA+ functionality, mortgage refinancing flows, junior accounts, live promotional banners, and more. This role not only allowed me to design clear, intuitive financial journeys but also helped me deepen my understanding of how to build trustworthy digital products in a highly regulated industry."
+                    "text": "INDEXO is a modern financial company in Latvia focused on transparent investing, pension management, and digital banking. The bank officially launched on 28 August 2024, and I joined the team less than a month later as a UI/UX designer. Over the year, I worked on both the app and website, improving key user flows such as VISA+, loan products, live banners, and junior account. During this time, I helped support the early growth of the bank and gained strong experience in designing clear, user-friendly financial products.",
+                    "galleryImages": [
+                        "/assets/img/Indexo/indexo-pic1.png",
+                        "/assets/img/Indexo/indexo-pic2.png",
+                        "/assets/img/Indexo/indexo-pic3.png"
+                    ]
                 },
                 {
                     "type": "about2",
-                    "heading": "My role & responsibilities",
-                    "text": "Working in a small team of three gave us the chance to explore every stage of development...",
-                    "mainImage": "/assets/img/EtherLocked/EtherLocked-pic1.png",
+                    "heading": "Loan products",
+                    "text": [
+                        "When I joined INDEXO, the app offered only one loan option — a consumer loan. As the product grew, the team introduced mortgage refinancing as the first major expansion. I worked closely with Reinis, who led the project, acting as his right hand and helping shape the full user flow from start to finish. After launching refinancing, we began working on a third product: home equity, which is currently still in development.",
+                        "With three different loan products planned in the app, our main challenge was reorganizing the entire loan section. We needed to decide how to present all products together, explain their differences clearly, and design a flow that helps users easily understand which loan type fits their needs. My role was to support the structure, simplify navigation, and create a clear, user-friendly experience for comparing and applying for loans."
+                    ],
+                    "mainImage": "/assets/img/Indexo/indexo-pic4.png",
                     "galleryImages": [
-                        "/assets/img/EtherLocked/EtherLocked-pic4.png",
-                        "/assets/img/EtherLocked/EtherLocked-pic5.png"
+                        "/assets/img/Indexo/indexo-pic5.png",
+                        "/assets/img/Indexo/indexo-pic6.png",
+                        "/assets/img/Indexo/indexo-pic7.png"
                     ]
                 },
                 {
-                    "type": "about3",
-                    "heading": "Gameplay & atmosphere",
-                    "text": "EtherLocked is a first-person puzzle game where players solve environmental puzzles using light...",
-                    "video": "/assets/img/EtherLocked/video.mp4",
+                    "type": "about2",
+                    "heading": "VISA+",
+                    "text": [
+                        "VISA+ allows users to send and receive money using only a phone number — no account details needed. When all partner banks were encouraged to add this service to their apps, our team at INDEXO had to design the entire user flow from the ground up.",
+                        "One challenge was that VISA+ supports multiple card options, but INDEXO currently provides only one card, so we had to rework the standard flow and adapt it to our product. Another challenge was differentiating VISA+ from an existing local feature that lets users send money within Latvia if a phone number is linked to a card. VISA+ works globally, so we needed to clearly guide users when they are sending money locally versus internationally through VISA+.",
+                        "My role was to design clear, intuitive screens and logic that helped users link their number, choose VISA+, and send money worldwide without confusion."
+                    ],
+                    "mainImage": "/assets/img/Indexo/indexo-pic8.png",
                     "galleryImages": [
-                        "/assets/img/EtherLocked/EtherLocked-pic6.png",
-                        "/assets/img/EtherLocked/EtherLocked-pic7.png"
+                        "/assets/img/Indexo/indexo-pic9.png",
+                        "/assets/img/Indexo/indexo-pic10.png",
+                        "/assets/img/Indexo/indexo-pic11.png"
                     ]
+                },
+                {
+                    "type": "about2",
+                    "heading": "Other projects",
+                    "text": [
+                        "During my time at INDEXO, I contributed to a variety of smaller projects that supported both the mobile app and the website. One of the more complex internal initiatives I worked on was the Junior Account — an upcoming feature that will allow parents to create and manage accounts for children aged 6–17.",
+                        "I also helped bring the Retirement Planning Tool to life and improved the overall app experience by fixing user flows and automating several tasks — including creating live banners and automating processes that previously required users to contact support.",
+                        "Additionally, I designed multiple website pages such as the Voluntary Share Buyback Offer, the Deposit Campaign landing page, 3rd Pillar Pensions for Employers, and The Pension System in Latvia, and supported development by testing features and reporting issues."
+                    ],
+                    "mainImage": "/assets/img/Indexo/indexo-pic12.png"
                 }
             ]
         },
@@ -49,7 +73,6 @@
             "contributions": "Developer, UX Designer, UI Designer",
             "teammates": "Rebeka Forgach, Eliza Drazniece, Mate Forgach",
             "backgroundVideo": "/assets/img/EtherLocked/video.mp4",
-            "logline": "EtherLocked is a first-person psychological horror puzzle game where Orion becomes trapped between dreams and reality during sleep paralysis",
             "tags": [
                 "Puzzle game",
                 "3D",
@@ -116,6 +139,201 @@
                         "The first major challenge was the planning stage—we spent nearly six months defining the story, mechanics, and puzzle structure before development even began. I didn’t expect the planning phase to take so long, but it became essential for making the rest of the project possible.",
                         "During development, I ran into several technical difficulties. The puzzle system—connecting the diary clues, clock logic, ticket spawning, and padlock code—took a lot of trial and error to get right. The clock mechanics in particular caused problems with pivot points and rotation behavior, leading me to redesign the interaction into a more stable click-based system. UI state management was another challenge, especially handling overlaps between menus, camera transitions, and object interactions.",
                         "Even with these obstacles, each problem taught me something valuable about structure, logic, and game flow. And in the end, it was all worth it—thanks to my supportive team, and the amount I was able to learn throughout the project."
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "cards",
+            "title": "Mystical playing cards",
+            "timeline": "January 2024 – May 2024",
+            "contributions": "Designer, illustrator",
+            "teammates": "Rebeka Forgach, Eliza Drazniece",
+            "backgroundVideo": "/assets/img/Cards/cards.mp4",
+            "tags": [
+                "Game",
+                "Cards",
+                "Design"
+            ],
+            "sections": [
+                {
+                    "type": "about1",
+                    "heading": "About the project",
+                    "text": "It was a half-year project where we created a mystical French deck that also visualizes the rules of “Shithead.” The cards follow a dark, four-element theme (water, air, earth, fire), and the special cards — 2, 3, 7, and 10 — were given their own unique creatures: 2 resets the pile, 3 acts as an invisible card, 7 lets you play a card equal to or lower than 7, and 10 removes the entire pile from the game.",
+                    "galleryImages": [
+                        "/assets/img/Cards/Cards-pic1.png",
+                        "/assets/img/Cards/Cards-pic2.png",
+                        "/assets/img/Cards/Cards-pic3.png"
+                    ]
+                },
+                {
+                    "type": "playing-cards",
+                    "groups": [
+                        {
+                            "icon": "/assets/img/Cards/Earth/Earth-icon.png",
+                            "iconAlt": "Earth deck icon",
+                            "cards": [
+                                "/assets/img/Cards/Earth/Cards_Earth_pic1.png",
+                                "/assets/img/Cards/Earth/Cards_Earth_pic2.png",
+                                "/assets/img/Cards/Earth/Cards_Earth_pic3.png",
+                                "/assets/img/Cards/Earth/Cards_Earth_pic4.png",
+                                "/assets/img/Cards/Earth/Cards_Earth_pic5.png",
+                                "/assets/img/Cards/Earth/Cards_Earth_pic6.png",
+                                "/assets/img/Cards/Earth/Cards_Earth_pic7.png",
+                                "/assets/img/Cards/Earth/Cards_Earth_pic8.png",
+                                "/assets/img/Cards/Earth/Cards_Earth_pic9.png",
+                                "/assets/img/Cards/Earth/Cards_Earth_pic10.png",
+                                "/assets/img/Cards/Earth/Cards_Earth_pic11.png",
+                                "/assets/img/Cards/Earth/Cards_Earth_pic12.png",
+                                "/assets/img/Cards/Earth/Cards_Earth_pic13.png"
+                            ]
+                        },
+                        {
+                            "icon": "/assets/img/Cards/Air/Air-icon.png",
+                            "iconAlt": "Air deck icon",
+                            "cards": [
+                                "/assets/img/Cards/Air/Cards_Air_pic1.png",
+                                "/assets/img/Cards/Air/Cards_Air_pic2.png",
+                                "/assets/img/Cards/Air/Cards_Air_pic3.png",
+                                "/assets/img/Cards/Air/Cards_Air_pic4.png",
+                                "/assets/img/Cards/Air/Cards_Air_pic5.png",
+                                "/assets/img/Cards/Air/Cards_Air_pic6.png",
+                                "/assets/img/Cards/Air/Cards_Air_pic7.png",
+                                "/assets/img/Cards/Air/Cards_Air_pic8.png",
+                                "/assets/img/Cards/Air/Cards_Air_pic9.png",
+                                "/assets/img/Cards/Air/Cards_Air_pic10.png",
+                                "/assets/img/Cards/Air/Cards_Air_pic11.png",
+                                "/assets/img/Cards/Air/Cards_Air_pic12.png",
+                                "/assets/img/Cards/Air/Cards_Air_pic13.png"
+                            ]
+                        },
+                        {
+                            "icon": "/assets/img/Cards/Fire/Fire-icon.png",
+                            "iconAlt": "Fire deck icon",
+                            "cards": [
+                                "/assets/img/Cards/Fire/Cards_Fire_pic1.png",
+                                "/assets/img/Cards/Fire/Cards_Fire_pic2.png",
+                                "/assets/img/Cards/Fire/Cards_Fire_pic3.png",
+                                "/assets/img/Cards/Fire/Cards_Fire_pic4.png",
+                                "/assets/img/Cards/Fire/Cards_Fire_pic5.png",
+                                "/assets/img/Cards/Fire/Cards_Fire_pic6.png",
+                                "/assets/img/Cards/Fire/Cards_Fire_pic7.png",
+                                "/assets/img/Cards/Fire/Cards_Fire_pic8.png",
+                                "/assets/img/Cards/Fire/Cards_Fire_pic9.png",
+                                "/assets/img/Cards/Fire/Cards_Fire_pic10.png",
+                                "/assets/img/Cards/Fire/Cards_Fire_pic11.png",
+                                "/assets/img/Cards/Fire/Cards_Fire_pic12.png",
+                                "/assets/img/Cards/Fire/Cards_Fire_pic13.png"
+                            ]
+                        },
+                        {
+                            "icon": "/assets/img/Cards/Water/Water-icon.png",
+                            "iconAlt": "Water deck icon",
+                            "cards": [
+                                "/assets/img/Cards/Water/Cards_Water_pic1.png",
+                                "/assets/img/Cards/Water/Cards_Water_pic2.png",
+                                "/assets/img/Cards/Water/Cards_Water_pic3.png",
+                                "/assets/img/Cards/Water/Cards_Water_pic4.png",
+                                "/assets/img/Cards/Water/Cards_Water_pic5.png",
+                                "/assets/img/Cards/Water/Cards_Water_pic6.png",
+                                "/assets/img/Cards/Water/Cards_Water_pic7.png",
+                                "/assets/img/Cards/Water/Cards_Water_pic8.png",
+                                "/assets/img/Cards/Water/Cards_Water_pic9.png",
+                                "/assets/img/Cards/Water/Cards_Water_pic10.png",
+                                "/assets/img/Cards/Water/Cards_Water_pic11.png",
+                                "/assets/img/Cards/Water/Cards_Water_pic12.png",
+                                "/assets/img/Cards/Water/Cards_Water_pic13.png"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "cheester",
+            "title": "Court Cheester",
+            "titleLink": "https://eeeggr.itch.io/court-cheester",
+            "timeline": "26th–28th of January 2024",
+            "contributions": "Developer, UX Designer, UI Designer",
+            "teammates": "Rebeka Forgach, Eliza Drazniece",
+            "backgroundVideo": "/assets/img/Cheester/cheese-video.mp4",
+            "tags": [
+                "Top-down",
+                "2D",
+                "Arcade hopper"
+            ],
+            "sections": [
+                {
+                    "type": "about1",
+                    "heading": "About the project",
+                    "text": "Court Cheester is an arcade hopper game made during a weekend game jam with the theme “Make me laugh.” I worked as the developer, and my two teammates were artists. The story follows Señor Prankster Pipsqueak, a brave mouse who travels to the king’s castle to spread joy and prove that mice aren’t scary after all. Despite the short time and small team, we built a fun, playable experience from start to finish.",
+                    "galleryImages": [
+                        "/assets/img/Cheester/Cheese-pic4.png",
+                        "/assets/img/Cheester/Cheese-pic5.png",
+                        "/assets/img/Cheester/Cheese-pic6.png",
+                        "/assets/img/Cheester/Cheese-pic7.png",
+                        "/assets/img/Cheester/Cheese-pic8.png",
+                        "/assets/img/Cheester/Cheese-pic9.png",
+                        "/assets/img/Cheester/Cheese-pic1.png",
+                        "/assets/img/Cheester/Cheese-pic2.png",
+                        "/assets/img/Cheester/Cheese-pic3.png"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "ai",
+            "title": "AI Sport Assistant",
+            "timeline": "2024-2025",
+            "backgroundVideo": "/assets/img/AI-tool/ai.mp4",
+            "tags": [
+                "AI",
+                "Computer vision",
+                "Sports"
+            ],
+            "sections": [
+                {
+                    "type": "about1",
+                    "heading": "About the project",
+                    "text": "This project was created as my bachelor’s thesis and focuses on developing a real-time system that uses computer vision to evaluate how correctly a person performs a sit-up. The goal was to provide an accessible alternative to professional supervision, which can be expensive and limited. Using pose estimation and the MediaPipe Pose model, the system analyzes body position and gives immediate feedback on exercise form.",
+                    "galleryImages": [
+                        "/assets/img/AI-tool/AI-pic1.png",
+                        "/assets/img/AI-tool/AI-pic2.png",
+                        "/assets/img/AI-tool/AI-pic3.png"
+                    ]
+                },
+                {
+                    "type": "about2",
+                    "heading": "Theory",
+                    "text": "At the start of the project, I researched how other authors approach human pose estimation and compared different methods used to detect body position. I also looked at how pose models visualize results, how deep learning is applied in this field, and which quality metrics are used to judge a model’s performance. Five popular models—YOLO11, OpenPose, MediaPipe Pose, PoseNet, and MoveNet—were compared, with performance being the main factor for choosing the final model. In addition, I reviewed five widely used pose estimation datasets (MS COCO, MPII, LSP, Penn Action, and OCHuman) and explained how they are used, as well as how a custom dataset can be created for a specific task.",
+                    "mainImage": "/assets/img/AI-tool/AI-pic4.png"
+                },
+                {
+                    "type": "about3",
+                    "heading": "Practical Part 1",
+                    "text": [
+                        "In the first practical stage, I checked whether the user moves from lying to sitting and whether the hands stay near the shoulders. The lying-to-sitting movement was detected using three keypoints—the shoulder, hip, and ankle—by calculating the hip angle. The hand position was checked by creating a shoulder-sized radius and measuring the distance between the shoulders and wrists.",
+                        "For testing, I recorded 12 videos from different camera angles and with three situations: correct sit-ups, hands in the wrong place, and shoulders not passing the hips. The main challenges were hidden keypoints, side-facing camera angles, and crossed arms during the exercise. These issues showed that a simple rule-based approach is not reliable enough and needs further improvement in the next development stages."
+                    ],
+                    "video": "/assets/img/AI-tool/AI2.mp4",
+                    "galleryImages": [
+                        "/assets/img/AI-tool/AI-pic6.png",
+                        "/assets/img/AI-tool/AI-pic7.png",
+                        "/assets/img/AI-tool/AI-pic8.png"
+                    ]
+                },
+                {
+                    "type": "about3",
+                    "heading": "Practical Part 2",
+                    "text": [
+                        "In the second practical stage, I improved the system by training it with two custom datasets—one for upper-body position and one for hand position. I recorded new videos, annotated each frame, cleaned the data, and trained the model using scikit-learn.",
+                        "After training, the results improved noticeably. Upper-body detection increased from 75% to 93.65%, and hand-position detection improved from about 50% to 61.75%. The model handled different angles and more complex poses better than the rule-based version, although crossed arms and hidden keypoints still caused challenges. More diverse training data would help increase accuracy even further."
+                    ],
+                    "video": "/assets/img/AI-tool/AI3.mp4",
+                    "galleryImages": [
+                        "/assets/img/AI-tool/AI-pic9.png",
+                        "/assets/img/AI-tool/AI-pic10.png",
+                        "/assets/img/AI-tool/AI-pic11.png"
                     ]
                 }
             ]

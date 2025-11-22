@@ -61,21 +61,20 @@
   <main class="main" id="top">
     <!--==================== HOME ====================-->
     <section class="home section">
-      <ul class="home-text container">
+      <div class="home-content container">
         <h3 class="home-title">
           HEY THERE, I AM
           <img src="assets/img/portfolio/name.png" alt="Name">
         </h3>
-        <li class="home-description">
-          <p>
-            <span>Welcome</span> to my little digital campsite. <span>I code and I create</span> stories that feel like
-            stars in the
-            night sky —
-            simple, joyful, and full of wonder.
-            <br><span>Grab a seat by the fire, and let’s explore my work together.</span>
-          </p>
-        </li>
-      </ul>
+
+        <p class="home-description">
+          <span>Welcome</span> to my little digital campsite. <span>I code and I create</span> stories that feel like
+          stars in the night sky — simple, joyful, and full of wonder.
+          <br><span>Grab a seat by the fire, and let’s explore my works together.</span>
+        </p>
+        <img src="assets/img/portfolio/home-robot.png" alt="Campsite robot" class="home-robot" />
+      </div>
+
       <div class="fireflies" aria-hidden="true"></div>
     </section>
 
@@ -96,15 +95,8 @@
             <span class="tag">Website</span>
           </div>
           <p class="work__desc">
-            INDEXO is a modern financial company in Latvia focused on transparent investing, pension management, and
-            digital banking. They combine clear communication with innovative technology to make financial services
-            simple, secure, and accessible for everyone.
-          </p>
-          <p class="work__desc">
-            I worked as a UI/UX designer on INDEXO’s app and website for a year, creating and improving key user flows
-            such as VISA+, mortgage refinancing, live banners, junior accounts, and more. During this time, I gained
-            valuable
-            experience, strengthened my design skills, and learned a lot about building intuitive financial products.
+            Indexo Bank is a modern Latvian digital bank focused on simple, transparent financial services and smart
+            investment solutions
           </p>
 
           <!-- Image selector circles -->
@@ -117,13 +109,13 @@
               style="background-image: url('assets/img/portfolio/indexo-pic3.png');"></span>
           </div>
           <div class="work__buttons">
-            <a class="btn" href="https://indexo.lv/" aria-label="Lovely button">
+            <a href="work.html?project=indexo" class="button-learn">Learn more</a>
+            <a class="check-btn" href="https://indexo.lv/" aria-label="Lovely button">
               <span class="text">Check it out</span>
-              <button class="simple-button material-symbols-rounded" aria-label="Open">
+              <button class="circle-button material-symbols-rounded" aria-label="Open">
                 arrow_forward
               </button>
             </a>
-            <a href="work.html?project=indexo" class="button-learn">Learn more</a>
           </div>
         </div>
       </div>
@@ -145,12 +137,8 @@
             <span class="tag">First-person</span>
           </div>
           <p class="work__desc">
-            EtherLocked is a first-person psychological horror puzzle game where Orion becomes trapped
-            between dreams and reality during sleep paralysis.
-          </p>
-          <p class="work__desc">
-            EtherLocked is a first-person psychological horror puzzle game where Orion becomes trapped
-            between dreams and reality during sleep paralysis.
+            EtherLocked is a first-person psychological horror puzzle game where Orion becomes trapped between dreams
+            and reality during sleep paralysis
           </p>
 
           <!-- Image selector circles -->
@@ -163,12 +151,6 @@
               style="background-image: url('assets/img/portfolio/EtherLocked-pic3.png');"></span>
           </div>
           <div class="work__buttons">
-            <a class="btn" href="#" aria-label="Lovely button">
-              <span class="text">Check it out</span>
-              <button class="simple-button material-symbols-rounded" aria-label="Open">
-                arrow_forward
-              </button>
-            </a>
             <a href="work.html?project=etherlocked" class="button-learn">Learn more</a>
           </div>
         </div>
@@ -184,20 +166,19 @@
           <ul class="card-list swiper-wrapper">
             <!-- Card 1 -->
             <li class="card-item swiper-slide">
-              <a href="#" class="card-link" style="--bg: url('../img/portfolio/work-1.png')">
+              <a href="work.html?project=cards" class="card-link" style="--bg: url('../img/portfolio/cards.png')">
                 <div class="card-upper">
                   <p class="card-number">/03</p>
-                  <p class="badge">value</p>
+                  <p class="badge">Design</p>
                 </div>
 
                 <h2 class="card-title">
-                  Creativity.<br>
-                  Functionality.
+                  Mystical playing cards
                 </h2>
 
                 <p class="card-desc">
-                  Silvana Collection stands out as a manufacturer of modern unusual furniture due to its unparalleled
-                  commitment to pushing the boundaries of design.
+                  A mystical French playing card deck themed around the four elements, with visuals that also illustrate
+                  the rules of “Shithead”
                 </p>
 
                 <button class="card-button material-symbols-rounded" aria-label="Open">
@@ -208,19 +189,19 @@
 
             <!-- Card 2 -->
             <li class="card-item swiper-slide">
-              <a href="#" class="card-link" style="--bg: url('../img/portfolio/work-1.png')">
+              <a href="work.html?project=cheester" class="card-link" style="--bg: url('../img/portfolio/cheese.png')">
                 <div class="card-upper">
                   <p class="card-number">/04</p>
-                  <p class="badge">value</p>
+                  <p class="badge">Game</p>
                 </div>
 
                 <h2 class="card-title">
-                  Unusual
+                  Court Cheester
                 </h2>
 
                 <p class="card-desc">
-                  Silvana Collection stands out as a manufacturer of modern unusual furniture due to its unparalleled
-                  commitment to pushing the boundaries of design.
+                  A brave little mouse sets out on a daring journey to make the king laugh and prove that mice aren’t
+                  the scary creatures everyone believes them to be
                 </p>
 
                 <button class="card-button material-symbols-rounded" aria-label="Open">
@@ -231,21 +212,18 @@
 
             <!-- Card 3 -->
             <li class="card-item swiper-slide">
-              <a href="#" class="card-link" style="--bg: url('../img/portfolio/work-1.png')">
+              <a href="work.html?project=ai" class="card-link" style="--bg: url('../img/portfolio/ai_assistant.png')">
                 <div class="card-upper">
                   <p class="card-number">/05</p>
-                  <p class="badge">value</p>
+                  <p class="badge">AI</p>
                 </div>
 
                 <h2 class="card-title">
-                  Unusual.<br>
-                  Harmonious.<br>
-                  Refined.
+                  AI Sport Assistant
                 </h2>
 
                 <p class="card-desc">
-                  Silvana Collection stands out as a manufacturer of modern unusual furniture due to its unparalleled
-                  commitment to pushing the boundaries of design.
+                  A real-time computer vision system that analyzes sit-ups and provides instant feedback
                 </p>
 
                 <button class="card-button material-symbols-rounded" aria-label="Open">
@@ -269,7 +247,7 @@
 
       <div class="reach-out">
         <span class="reach-label">Don't be shy and reach out</span>
-        <a href="contact.html" class="button-35 ri-pencil-fill"></a>
+        <a href="contact.html" class="pop-button ri-pencil-fill"></a>
       </div>
 
       <div class="footer-social">
