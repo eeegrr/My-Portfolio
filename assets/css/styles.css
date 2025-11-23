@@ -368,25 +368,6 @@ img {
   background: linear-gradient(to bottom, rgb(35, 11, 6) 0%, rgba(35, 11, 6, 0) 50%);
 }
 
-.home::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-
-  width: 100%;
-  height: auto;
-  aspect-ratio: 1920 / 550;
-
-  background-image: url("../img/portfolio/bushes.png");
-  background-size: 100% auto;
-  background-repeat: no-repeat;
-  background-position: bottom center;
-
-  pointer-events: none;
-  z-index: 999;
-}
-
 .home>* {
   position: relative;
   z-index: 4;
@@ -1031,7 +1012,7 @@ img {
 
   background:
     linear-gradient(to bottom, rgb(35, 11, 6) 0%, rgba(35, 11, 6, 0) 50%),
-    url("assets/img/contact/robot.png") center bottom no-repeat;
+    url("/assets/img/contact/robot.png") center bottom no-repeat;
 
   background-size: cover, cover;
 }
@@ -1127,7 +1108,6 @@ img {
   position: fixed;
   inset: 0;
   display: none;
-  /* toggled by JS (add .open) */
   align-items: center;
   justify-content: center;
   z-index: 9999;
@@ -1359,9 +1339,10 @@ img {
 /* ===== TITLE ===== */
 
 .title-link {
-  display: inline-block;
+  display: inline-flex;
   text-decoration: none;
   color: inherit;
+  width: fit-content;
 }
 
 .title-container {
@@ -1569,11 +1550,10 @@ img {
   width: 100%;
   display: grid;
 
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(2, 1fr);
 
   gap: 1.5rem;
   padding-bottom: 5rem;
-  padding-inline: 1.5rem;
 
   justify-content: center;
 }
@@ -1585,24 +1565,6 @@ img {
   display: block;
   object-fit: cover;
   border-radius: 0.5rem;
-}
-
-@media (max-width: 1024px) {
-  .cards-container {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-@media (max-width: 768px) {
-  .cards-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 480px) {
-  .cards-container {
-    grid-template-columns: 1fr;
-  }
 }
 
 /*=== next project button ===*/
@@ -1790,9 +1752,24 @@ img {
   /*=== WORK DETAILS ===*/
 
   .work-title {
-    font-size: 2.25rem;
+    font-size: 1.6rem;
   }
 
+  .title-button {
+    font-size: 20px;
+    height: 30px;
+    width: 30px;
+  }
+
+  .cards-icons {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 2rem;
+  }
+
+  .cards-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
   .picture-container {
     grid-template-columns: 200px;
@@ -1831,6 +1808,10 @@ img {
 
   .work-title {
     font-size: 4.25rem;
+  }
+
+  .cards-container {
+    grid-template-columns: repeat(3, 1fr);
   }
 
 }
@@ -1982,6 +1963,12 @@ img {
     width: 80%;
   }
 
+  /*=== ABOUT DETAILS ===*/
+
+  .cards-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
   /*=== PICTURE GALLERY ===*/
 
   .picture-container {
@@ -2113,6 +2100,10 @@ img {
     margin-inline: 0;
     order: 0;
     margin-bottom: 0;
+  }
+
+  .cards-container {
+    grid-template-columns: repeat(5, 1fr);
   }
 
   .picture-gallery1 {
