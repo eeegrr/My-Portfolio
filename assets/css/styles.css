@@ -2049,8 +2049,8 @@ img {
     position: absolute;
     inset: 0;
 
-    background-image: url("assets/img/about/about-left.png"),
-      url("assets/img/about/about-right.png");
+    background-image: url("../img/about/about-left.png"),
+      url("../img/about/about-right.png");
     background-position: left top, right top;
     background-repeat: no-repeat, no-repeat;
     background-size: auto 100%, auto 100%;
