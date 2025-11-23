@@ -1012,7 +1012,7 @@ img {
 
   background:
     linear-gradient(to bottom, rgb(35, 11, 6) 0%, rgba(35, 11, 6, 0) 50%),
-    url("/assets/img/contact/robot.png") center bottom no-repeat;
+    url("../img/contact/robot.png") center bottom no-repeat;
 
   background-size: cover, cover;
 }
