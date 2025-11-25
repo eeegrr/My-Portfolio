@@ -1222,14 +1222,42 @@ img {
   left: calc(50% + var(--pupil-x, 0px));
 }
 
+@media (max-width: 768px) {
+  .contact {
+    background:
+      linear-gradient(to bottom, rgb(35, 11, 6) 0%, rgba(35, 11, 6, 0) 50%),
+      url("../img/contact/robot-mobile.png") center bottom no-repeat;
+  }
+
+  .contact .eyes {
+    display: none;
+  }
+}
+
 @media screen and (min-width: 1400px) {
   .contact .eyes {
-    gap: 4rem;
+    gap: 3.5rem;
+  }
+
+  .contact .eye {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .contact .eyes {
+    gap: 5rem;
+  }
+
+  .contact .eye {
+    width: 150px;
+    height: 150px;
   }
 
   .contact .eye::after {
-    width: 45px;
-    height: 45px;
+    width: 55px;
+    height: 55px;
   }
 }
 
@@ -1324,6 +1352,15 @@ img {
   transform: translate(-50%, -50%);
   z-index: -1;
   filter: brightness(30%);
+}
+
+/* Mobile: hide video and use background image */
+@media (max-width: 768px) {
+  .work-details {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
 }
 
 /* Your content */
@@ -1772,7 +1809,6 @@ img {
   }
 
   .picture-container {
-    grid-template-columns: 200px;
     justify-content: center;
   }
 

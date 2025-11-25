@@ -9,6 +9,7 @@
             "contributions": "UI Design, UX Design, tester",
             "teammates": "Reinis Vitols, Alberts Pumpurs, Martins Tuls, Anna Lipenberga",
             "backgroundVideo": "assets/img/Indexo/indexo.mp4",
+            "backgroundImageMobile": "assets/img/Indexo/indexo-bg.png",
             "tags": [
                 "Bank",
                 "App",
@@ -73,6 +74,7 @@
             "contributions": "Developer, UX Designer, UI Designer",
             "teammates": "Rebeka Forgach, Eliza Drazniece, Mate Forgach",
             "backgroundVideo": "assets/img/EtherLocked/video.mp4",
+            "backgroundImageMobile": "assets/img/EtherLocked/EtherLocked-bg.png",
             "tags": [
                 "Puzzle game",
                 "3D",
@@ -150,6 +152,7 @@
             "contributions": "Designer, illustrator",
             "teammates": "Rebeka Forgach, Eliza Drazniece",
             "backgroundVideo": "assets/img/Cards/cards.mp4",
+            "backgroundImageMobile": "assets/img/Cards/Cards-bg.png",
             "tags": [
                 "Game",
                 "Cards",
@@ -257,6 +260,7 @@
             "contributions": "Developer, UX Designer, UI Designer",
             "teammates": "Rebeka Forgach, Eliza Drazniece",
             "backgroundVideo": "assets/img/Cheester/cheese-video.mp4",
+            "backgroundImageMobile": "assets/img/Cheester/Cheese-bg.png",
             "tags": [
                 "Top-down",
                 "2D",
@@ -286,6 +290,7 @@
             "title": "AI Sport Assistant",
             "timeline": "2024-2025",
             "backgroundVideo": "assets/img/AI-tool/Ai.mp4",
+            "backgroundImageMobile": "assets/img/AI-tool/ai-bg.png",
             "tags": [
                 "AI",
                 "Computer vision",

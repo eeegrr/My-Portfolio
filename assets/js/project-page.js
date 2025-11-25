@@ -92,8 +92,12 @@ function renderProjectPage(data) {
         }
     }
 
-    // Background video
+    // Background video + optional mobile image
     const bgVideo = document.querySelector(".bg-video");
+    const workDetailsSection =
+        document.querySelector(".work-details.section") ||
+        document.querySelector(".work-details");
+
     if (bgVideo) {
         const source = bgVideo.querySelector("source");
         if (data.backgroundVideo && source) {
@@ -102,6 +106,33 @@ function renderProjectPage(data) {
         } else {
             bgVideo.remove();
         }
+    }
+    if (workDetailsSection && data.backgroundImageMobile) {
+        const applyResponsiveBackground = () => {
+            const isSmallScreen = window.matchMedia("(max-width: 768px)").matches;
+
+            if (isSmallScreen) {
+                if (bgVideo) {
+                    bgVideo.pause?.();
+                    bgVideo.style.display = "none";
+                }
+
+                workDetailsSection.style.background =
+                    `linear-gradient(to top, rgb(45, 25, 13) 0%, rgba(45, 25, 13, 0) 40%),
+   url("${data.backgroundImageMobile}") center center / cover no-repeat`;
+            } else {
+                if (bgVideo && data.backgroundVideo) {
+                    bgVideo.style.display = "block";
+                    bgVideo.play?.().catch(() => { });
+                }
+
+                workDetailsSection.style.background = "";
+            }
+        };
+
+        // Run on load and on resize
+        applyResponsiveBackground();
+        window.addEventListener("resize", applyResponsiveBackground);
     }
 
     // Meta (timeline, contributions, teammates) – removes items if missing
