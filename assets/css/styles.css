@@ -11,7 +11,7 @@
   --text-color: rgb(131, 110, 97);
   --white-color: rgb(242, 242, 242);
   --body-color: rgb(45, 25, 13);
-  --container-color: rgb(102 57, 37);
+  --container-color: rgb(102, 57, 37);
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
@@ -499,6 +499,50 @@ img {
   .home .firefly::before,
   .home .firefly::after {
     animation: none !important;
+  }
+}
+
+/* Scroll button */
+
+.scroll-btn {
+  position: absolute;
+  bottom: 6vh;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  cursor: default;
+}
+
+.home>.scroll-btn {
+  z-index: 2;
+}
+
+.scroll-text {
+  display: block;
+  font-size: var(--normal-font-size);
+  color: var(--first-color);
+}
+
+.sdb05 i {
+  font-size: var(--normal-font-size);
+  color: var(--first-color);
+  display: block;
+  animation: sdb05 1.5s infinite;
+}
+
+@keyframes sdb05 {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(20px);
+    opacity: 0;
   }
 }
 
@@ -1014,7 +1058,7 @@ img {
     linear-gradient(to bottom, rgb(35, 11, 6) 0%, rgba(35, 11, 6, 0) 50%),
     url("../img/contact/robot.png") center bottom no-repeat;
 
-  background-size: cover, cover;
+  background-size: cover, auto;
 }
 
 /* Layout / container */
@@ -1182,12 +1226,12 @@ img {
 /*======= eyes =======*/
 
 .contact .eyes {
-  position: fixed;
-  bottom: 0rem;
+  position: absolute;
+  bottom: 0;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
-  gap: 3rem;
+  gap: 4rem;
   justify-content: center;
   pointer-events: none;
   z-index: 50;
@@ -1196,8 +1240,8 @@ img {
 .contact .eye {
   position: relative;
   display: inline-block;
-  width: 110px;
-  height: 110px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   background: transparent;
   overflow: hidden;
@@ -1207,8 +1251,8 @@ img {
 .contact .eye::after {
   content: "";
   position: absolute;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   background: var(--white-color);
   border-radius: 50%;
 
@@ -1227,37 +1271,11 @@ img {
     background:
       linear-gradient(to bottom, rgb(35, 11, 6) 0%, rgba(35, 11, 6, 0) 50%),
       url("../img/contact/robot-mobile.png") center bottom no-repeat;
+    background-size: cover;
   }
 
   .contact .eyes {
     display: none;
-  }
-}
-
-@media screen and (min-width: 1400px) {
-  .contact .eyes {
-    gap: 3.5rem;
-  }
-
-  .contact .eye {
-    width: 120px;
-    height: 120px;
-  }
-}
-
-@media screen and (min-width: 1600px) {
-  .contact .eyes {
-    gap: 4rem;
-  }
-
-  .contact .eye {
-    width: 150px;
-    height: 150px;
-  }
-
-  .contact .eye::after {
-    width: 50px;
-    height: 50px;
   }
 }
 
@@ -1890,12 +1908,11 @@ img {
     bottom: 0;
     height: 100%;
     background-image: url("../img/portfolio/bushes.png");
-    z-index: 3;
+    z-index: 1;
   }
 
   .home>* {
-    position: relative;
-    z-index: 1;
+    z-index: 3;
   }
 
   .home-content {
