@@ -1010,6 +1010,10 @@ img {
   box-shadow: 0 0 15px var(--first-color), 0 0 30px rgba(0, 0, 0, 0.2);
 }
 
+.hobbies-right {
+  display: none;
+}
+
 /* ============  MY JOURNEY ============== */
 
 .journey-title {
@@ -2008,6 +2012,34 @@ img {
 
   .hobby-circles {
     justify-content: flex-start;
+  }
+
+
+  .hobbies-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: self-end;
+    gap: 2rem;
+  }
+
+  .hobbies-left {
+    flex: 1;
+  }
+
+  .hobbies-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .hobby-arrow {
+    width: 60px;
+    height: auto;
+  }
+
+  .hobby-note {
+    color: var(--first-color);
   }
 
   /*=== MY JOURNEY ===*/
