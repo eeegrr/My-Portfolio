@@ -1,299 +1,394 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--=============== REMIXICONS ===============-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+    />
 
-  <!--=============== REMIXICONS ===============-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" />
+    <!--=============== GOOGLE FONTS ===============-->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_forward"
+    />
 
-  <!--=============== GOOGLE FONTS ===============-->
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_forward" />
+    <!--=============== SWIPER ===============-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
 
-  <!--=============== SWIPER ===============-->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css" />
 
-  <!--=============== CSS ===============-->
-  <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="shortcut icon" href="assets/img/web-icon.png" type="x-icon" />
+    <title>Evelina Graumane - Portfolio</title>
+  </head>
 
-  <link rel="shortcut icon" href="assets/img/web-icon.png" type="x-icon" />
-  <title>Evelina Graumane - Portfolio</title>
-</head>
+  <body>
+    <div class="cursor"></div>
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+      <nav class="nav container">
+        <a href="/" class="nav-logo">
+          <img src="assets/img/Logo.svg" alt="Logo" />
+        </a>
 
-<body>
-  <div class="cursor"></div>
-  <!--==================== HEADER ====================-->
-  <header class="header" id="header">
-    <nav class="nav container">
-      <a href="/" class="nav-logo">
-        <img src="assets/img/Logo.svg" alt="Logo" />
-      </a>
-
-      <div class="nav-menu" id="nav-menu">
-        <ul class="nav-list">
-          <li class="nav-item">
-            <a href="/" class="nav-link active-link">Portfolio</a>
-          </li>
-          <li class="nav-item">
-            <a href="about.html" class="nav-link">About</a>
-          </li>
-          <li class="nav-item">
-            <a href="contact.html" class="nav-link">Contact</a>
-          </li>
-        </ul>
-
-        <!-- Close button -->
-        <div class="nav-close" id="nav-close">
-          <i class="ri-close-line"></i>
-        </div>
-      </div>
-
-      <div class="nav-actions">
-        <div class="nav-toggle" id="nav-toggle">
-          <i class="ri-menu-line"></i>
-        </div>
-      </div>
-    </nav>
-  </header>
-
-  <main class="main" id="top">
-    <!--==================== HOME ====================-->
-    <section class="home section">
-      <div class="home-content container">
-        <h3 class="home-title">
-          HEY THERE, I AM
-          <img src="assets/img/portfolio/name.png" alt="Name">
-        </h3>
-
-        <p class="home-description">
-          <span>Welcome</span> to my little digital campsite. <span>I code and I create</span> stories that feel like
-          stars in the night sky — simple, joyful, and full of wonder.
-        </p>
-        <p class="home-description">
-          <br><span>Grab a seat by the fire, and let’s explore my works together.</span>
-        </p>
-        <img src="assets/img/portfolio/home-robot.png" alt="Campsite robot" class="home-robot" />
-      </div>
-      <div class="scroll-btn sdb05">
-        <span class="scroll-text">Scroll</span>
-        <i class="ri-arrow-down-s-line"></i>
-      </div>
-      <div class="fireflies" aria-hidden="true"></div>
-    </section>
-
-    <!--==================== WORK PIECES ====================-->
-    <!-- Work 1 -->
-    <section class="work section">
-      <div class="my-works container grid">
-        <div class="work__image">
-          <img class="mainImage" src="assets/img/portfolio/indexo-pic1.png" alt="Work Screenshot" />
-          <span class="work__number">01</span>
-        </div>
-
-        <div class="work__content">
-          <h1 class="work__title">INDEXO</h1>
-          <div class="work__tags">
-            <span class="tag">Bank</span>
-            <span class="tag">App</span>
-            <span class="tag">Website</span>
-          </div>
-          <p class="work__desc">
-            Indexo Bank is a modern Latvian digital bank focused on simple, transparent financial services and smart
-            investment solutions
-          </p>
-
-          <!-- Image selector circles -->
-          <div class="work__circles">
-            <span class="circle active" data-image="assets/img/portfolio/indexo-pic1.png"
-              style="background-image: url('assets/img/portfolio/indexo-pic1.png');"></span>
-            <span class="circle" data-image="assets/img/portfolio/indexo-pic2.png"
-              style="background-image: url('assets/img/portfolio/indexo-pic2.png');"></span>
-            <span class="circle" data-image="assets/img/portfolio/indexo-pic3.png"
-              style="background-image: url('assets/img/portfolio/indexo-pic3.png');"></span>
-          </div>
-          <div class="work__buttons">
-            <a href="work.html?project=indexo" class="button-learn">Learn more</a>
-            <a class="check-btn" href="https://indexo.lv/" aria-label="Lovely button">
-              <span class="text">Check it out</span>
-              <button class="circle-button material-symbols-rounded" aria-label="Open">
-                arrow_forward
-              </button>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <div
-      class="divider"
-      style="--c1: rgb(39, 26, 7); --c2: rgb(45, 25, 13);">
-    </div>
-
-    <!-- Work 2 -->
-    <section class="work2 section">
-      <div class="my-works container grid">
-        <div class="work__image">
-          <img class="mainImage" src="assets/img/portfolio/EtherLocked-pic1.png" alt="Work Screenshot" />
-          <span class="work__number">02</span>
-        </div>
-
-        <div class="work__content">
-          <h1 class="work__title">ETHERLOCKED</h1>
-          <div class="work__tags">
-            <span class="tag">Puzzle game</span>
-            <span class="tag">3D</span>
-            <span class="tag">First-person</span>
-          </div>
-          <p class="work__desc">
-            EtherLocked is a first-person psychological horror puzzle game where Orion becomes trapped between dreams
-            and reality during sleep paralysis
-          </p>
-
-          <!-- Image selector circles -->
-          <div class="work__circles">
-            <span class="circle active" data-image="assets/img/portfolio/EtherLocked-pic1.png"
-              style="background-image: url('assets/img/portfolio/EtherLocked-pic1.png');"></span>
-            <span class="circle" data-image="assets/img/portfolio/EtherLocked-pic2.png"
-              style="background-image: url('assets/img/portfolio/EtherLocked-pic2.png');"></span>
-            <span class="circle" data-image="assets/img/portfolio/EtherLocked-pic3.png"
-              style="background-image: url('assets/img/portfolio/EtherLocked-pic3.png');"></span>
-          </div>
-          <div class="work__buttons">
-            <a href="work.html?project=etherlocked" class="button-learn">Learn more</a>
-            <a class="check-btn" href="https://eeeggr.itch.io/etherlocked" aria-label="Lovely button">
-              <span class="text">Check it out</span>
-              <button class="circle-button material-symbols-rounded" aria-label="Open">
-                arrow_forward
-              </button>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <!--==================== OTHER WORK PIECES ====================-->
-    <section class="other section">
-      <div class="other-works container swiper">
-        <div class="section-title">Other work</div>
-        <div class="card-wrapper">
-          <ul class="card-list swiper-wrapper">
-            <!-- Card 1 -->
-            <li class="card-item swiper-slide">
-              <a href="work.html?project=cards" class="card-link" style="--bg: url('../img/portfolio/cards.png')">
-                <div class="card-upper">
-                  <p class="card-number">/03</p>
-                  <p class="badge">Design</p>
-                </div>
-
-                <h2 class="card-title">
-                  Mystical playing cards
-                </h2>
-
-                <p class="card-desc">
-                  A mystical French playing card deck themed around the four elements, with visuals that also illustrate
-                  the rules of “Shithead”
-                </p>
-
-                <button class="card-button material-symbols-rounded" aria-label="Open">
-                  arrow_forward
-                </button>
-              </a>
+        <div class="nav-menu" id="nav-menu">
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="/" class="nav-link active-link">Portfolio</a>
             </li>
-
-            <!-- Card 2 -->
-            <li class="card-item swiper-slide">
-              <a href="work.html?project=cheester" class="card-link" style="--bg: url('../img/portfolio/cheese.png')">
-                <div class="card-upper">
-                  <p class="card-number">/04</p>
-                  <p class="badge">Game</p>
-                </div>
-
-                <h2 class="card-title">
-                  Court Cheester
-                </h2>
-
-                <p class="card-desc">
-                  A brave little mouse sets out on a daring journey to make the king laugh and prove that mice aren’t
-                  the scary creatures everyone believes them to be
-                </p>
-
-                <button class="card-button material-symbols-rounded" aria-label="Open">
-                  arrow_forward
-                </button>
-              </a>
+            <li class="nav-item">
+              <a href="about.html" class="nav-link">About</a>
             </li>
-
-            <!-- Card 3 -->
-            <li class="card-item swiper-slide">
-              <a href="work.html?project=ai" class="card-link" style="--bg: url('../img/portfolio/ai_assistant.png')">
-                <div class="card-upper">
-                  <p class="card-number">/05</p>
-                  <p class="badge">AI</p>
-                </div>
-
-                <h2 class="card-title">
-                  AI Sport Assistant
-                </h2>
-
-                <p class="card-desc">
-                  A real-time computer vision system that analyzes sit-ups and provides instant feedback
-                </p>
-
-                <button class="card-button material-symbols-rounded" aria-label="Open">
-                  arrow_forward
-                </button>
-              </a>
+            <li class="nav-item">
+              <a href="contact.html" class="nav-link">Contact</a>
             </li>
           </ul>
 
-          <div class="swiper-pagination"></div>
-          <div class="swiper-slide-button swiper-button-prev"></div>
-          <div class="swiper-slide-button swiper-button-next"></div>
+          <!-- Close button -->
+          <div class="nav-close" id="nav-close">
+            <i class="ri-close-line"></i>
+          </div>
+        </div>
+
+        <div class="nav-actions">
+          <div class="nav-toggle" id="nav-toggle">
+            <i class="ri-menu-line"></i>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="main" id="top">
+      <!--==================== HOME ====================-->
+      <section class="home section">
+        <div class="home-content container">
+          <h3 class="home-title">
+            HEY THERE, I AM
+            <img src="assets/img/portfolio/name.png" alt="Name" />
+          </h3>
+
+          <p class="home-description">
+            <span>Welcome</span> to my little digital campsite.
+            <span>I code and I create</span> stories that feel like stars in the
+            night sky — simple, joyful, and full of wonder.
+          </p>
+          <p class="home-description">
+            <br /><span
+              >Grab a seat by the fire, and let’s explore my works
+              together.</span
+            >
+          </p>
+          <img
+            src="assets/img/portfolio/home-robot.png"
+            alt="Campsite robot"
+            class="home-robot"
+          />
+        </div>
+        <div class="scroll-btn sdb05">
+          <span class="scroll-text">Scroll</span>
+          <i class="ri-arrow-down-s-line"></i>
+        </div>
+        <div class="fireflies" aria-hidden="true"></div>
+      </section>
+
+      <!--==================== WORK PIECES ====================-->
+      <!-- Work 1 -->
+      <section class="work section">
+        <div class="my-works container grid">
+          <div class="work__image">
+            <img
+              class="mainImage"
+              src="assets/img/portfolio/indexo-pic1.png"
+              alt="Work Screenshot"
+            />
+            <span class="work__number">01</span>
+          </div>
+
+          <div class="work__content">
+            <h1 class="work__title">INDEXO</h1>
+            <div class="work__tags">
+              <span class="tag">Bank</span>
+              <span class="tag">App</span>
+              <span class="tag">Website</span>
+            </div>
+            <p class="work__desc">
+              Indexo Bank is a modern Latvian digital bank focused on simple,
+              transparent financial services and smart investment solutions
+            </p>
+
+            <!-- Image selector circles -->
+            <div class="work__circles">
+              <span
+                class="circle active"
+                data-image="assets/img/portfolio/indexo-pic1.png"
+                style="
+                  background-image: url('assets/img/portfolio/indexo-pic1.png');
+                "
+              ></span>
+              <span
+                class="circle"
+                data-image="assets/img/portfolio/indexo-pic2.png"
+                style="
+                  background-image: url('assets/img/portfolio/indexo-pic2.png');
+                "
+              ></span>
+              <span
+                class="circle"
+                data-image="assets/img/portfolio/indexo-pic3.png"
+                style="
+                  background-image: url('assets/img/portfolio/indexo-pic3.png');
+                "
+              ></span>
+            </div>
+            <div class="work__buttons">
+              <a href="work.html?project=indexo" class="button-learn"
+                >Learn more</a
+              >
+              <a
+                class="check-btn"
+                href="https://indexo.lv/"
+                aria-label="Lovely button"
+              >
+                <span class="text">Check it out</span>
+                <button
+                  class="circle-button material-symbols-rounded"
+                  aria-label="Open"
+                >
+                  arrow_forward
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div
+        class="divider"
+        style="--c1: rgb(39, 26, 7); --c2: rgb(45, 25, 13)"
+      ></div>
+
+      <!-- Work 2 -->
+      <section class="work2 section">
+        <div class="my-works container grid">
+          <div class="work__image">
+            <img
+              class="mainImage"
+              src="assets/img/portfolio/EtherLocked-pic1.png"
+              alt="Work Screenshot"
+            />
+            <span class="work__number">02</span>
+          </div>
+
+          <div class="work__content">
+            <h1 class="work__title">ETHERLOCKED</h1>
+            <div class="work__tags">
+              <span class="tag">Puzzle game</span>
+              <span class="tag">3D</span>
+              <span class="tag">First-person</span>
+            </div>
+            <p class="work__desc">
+              EtherLocked is a first-person psychological horror puzzle game
+              where Orion becomes trapped between dreams and reality during
+              sleep paralysis
+            </p>
+
+            <!-- Image selector circles -->
+            <div class="work__circles">
+              <span
+                class="circle active"
+                data-image="assets/img/portfolio/EtherLocked-pic1.png"
+                style="
+                  background-image: url('assets/img/portfolio/EtherLocked-pic1.png');
+                "
+              ></span>
+              <span
+                class="circle"
+                data-image="assets/img/portfolio/EtherLocked-pic2.png"
+                style="
+                  background-image: url('assets/img/portfolio/EtherLocked-pic2.png');
+                "
+              ></span>
+              <span
+                class="circle"
+                data-image="assets/img/portfolio/EtherLocked-pic3.png"
+                style="
+                  background-image: url('assets/img/portfolio/EtherLocked-pic3.png');
+                "
+              ></span>
+            </div>
+            <div class="work__buttons">
+              <a href="work.html?project=etherlocked" class="button-learn"
+                >Learn more</a
+              >
+              <a
+                class="check-btn"
+                href="https://eeeggr.itch.io/etherlocked"
+                aria-label="Lovely button"
+              >
+                <span class="text">Check it out</span>
+                <button
+                  class="circle-button material-symbols-rounded"
+                  aria-label="Open"
+                >
+                  arrow_forward
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--==================== OTHER WORK PIECES ====================-->
+      <section class="other section">
+        <div class="other-works container swiper">
+          <div class="section-title">Other work</div>
+          <div class="card-wrapper">
+            <ul class="card-list swiper-wrapper">
+              <!-- Card 1 -->
+              <li class="card-item swiper-slide">
+                <a
+                  href="work.html?project=cards"
+                  class="card-link"
+                  style="--bg: url('../img/portfolio/cards.png')"
+                >
+                  <div class="card-upper">
+                    <p class="card-number">/03</p>
+                    <p class="badge">Design</p>
+                  </div>
+
+                  <h2 class="card-title">Mystical playing cards</h2>
+
+                  <p class="card-desc">
+                    A mystical French playing card deck themed around the four
+                    elements, with visuals that also illustrate the rules of
+                    “Shithead”
+                  </p>
+
+                  <button
+                    class="card-button material-symbols-rounded"
+                    aria-label="Open"
+                  >
+                    arrow_forward
+                  </button>
+                </a>
+              </li>
+
+              <!-- Card 2 -->
+              <li class="card-item swiper-slide">
+                <a
+                  href="work.html?project=cheester"
+                  class="card-link"
+                  style="--bg: url('../img/portfolio/cheese.png')"
+                >
+                  <div class="card-upper">
+                    <p class="card-number">/04</p>
+                    <p class="badge">Game</p>
+                  </div>
+
+                  <h2 class="card-title">Court Cheester</h2>
+
+                  <p class="card-desc">
+                    A brave little mouse sets out on a daring journey to make
+                    the king laugh and prove that mice aren’t the scary
+                    creatures everyone believes them to be
+                  </p>
+
+                  <button
+                    class="card-button material-symbols-rounded"
+                    aria-label="Open"
+                  >
+                    arrow_forward
+                  </button>
+                </a>
+              </li>
+
+              <!-- Card 3 -->
+              <li class="card-item swiper-slide">
+                <a
+                  href="work.html?project=ai"
+                  class="card-link"
+                  style="--bg: url('../img/portfolio/ai_assistant.png')"
+                >
+                  <div class="card-upper">
+                    <p class="card-number">/05</p>
+                    <p class="badge">AI</p>
+                  </div>
+
+                  <h2 class="card-title">AI Sport Assistant</h2>
+
+                  <p class="card-desc">
+                    A real-time computer vision system that analyzes sit-ups and
+                    provides instant feedback
+                  </p>
+
+                  <button
+                    class="card-button material-symbols-rounded"
+                    aria-label="Open"
+                  >
+                    arrow_forward
+                  </button>
+                </a>
+              </li>
+            </ul>
+
+            <div class="swiper-pagination"></div>
+            <div class="swiper-slide-button swiper-button-prev"></div>
+            <div class="swiper-slide-button swiper-button-next"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!--==================== FOOTER ====================-->
+    <footer class="footer">
+      <div class="footer-container container">
+        <div class="reach-out">
+          <span class="reach-label">Don't be shy and reach out</span>
+          <a href="contact.html" class="pop-button ri-pencil-fill"></a>
+        </div>
+
+        <div class="footer-social">
+          <a
+            href="https://www.instagram.com/eee.ggr/"
+            class="footer-social-link"
+          >
+            <i class="ri-instagram-fill"></i>
+          </a>
+          <a
+            href="https://www.facebook.com/evelina.graumane/"
+            class="footer-social-link"
+          >
+            <i class="ri-facebook-fill"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/evel%C4%ABna-graumane-b60aa5246/"
+            class="footer-social-link"
+          >
+            <i class="ri-linkedin-fill"></i>
+          </a>
         </div>
       </div>
-    </section>
 
-  </main>
-  <!--==================== FOOTER ====================-->
-  <footer class="footer">
-    <div class="footer-container container">
+      <span class="footer-copy">
+        &#169; All Rights Reserved By Evelina Graumane
+      </span>
+    </footer>
 
-      <div class="reach-out">
-        <span class="reach-label">Don't be shy and reach out</span>
-        <a href="contact.html" class="pop-button ri-pencil-fill"></a>
-      </div>
+    <!--========== SCROLL UP ==========-->
+    <a href="#top" class="scrollup" id="scroll-up" aria-label="Scroll to top">
+      <i class="ri-arrow-up-line"></i>
+    </a>
 
-      <div class="footer-social">
-        <a href="https://www.instagram.com/eee.ggr/" class="footer-social-link">
-          <i class="ri-instagram-fill"></i>
-        </a>
-        <a href="https://www.facebook.com/evelina.graumane/" class="footer-social-link">
-          <i class="ri-facebook-fill"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/evel%C4%ABna-graumane-b60aa5246/" class="footer-social-link">
-          <i class="ri-linkedin-fill"></i>
-        </a>
-      </div>
-    </div>
+    <!--=============== SWIPER JS ===============-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
 
-    <span class="footer-copy">
-      &#169; All Rights Reserved By Evelina Graumane
-    </span>
-  </footer>
-
-  <!--========== SCROLL UP ==========-->
-  <a href="#top" class="scrollup" id="scroll-up" aria-label="Scroll to top">
-    <i class="ri-arrow-up-line"></i>
-  </a>
-
-  <!--=============== SWIPER JS ===============-->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-
-  <!--=============== MAIN JS ===============-->
-  <script src="assets/js/main.js"></script>
-</body>
-
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
