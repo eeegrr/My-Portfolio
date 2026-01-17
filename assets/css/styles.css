@@ -11,13 +11,12 @@
   --text-color: rgb(131, 110, 97);
   --white-color: rgb(242, 242, 242);
   --body-color: rgb(45, 25, 13);
-  --body-color-2: rgb(39, 26, 7);
   --container-color: rgb(102, 57, 37);
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
   --body-font: "Caveat Brush", cursive;
-  --biggest-font-size: 3.25rem;
+  --biggest-font-size: 2.25rem;
   --h1-font-size: 1.5rem;
   --h2-font-size: 1.25rem;
   --h3-font-size: 1rem;
@@ -361,12 +360,6 @@ img {
 }
 
 /*=============== HOME ===============*/
-.divider {
-  width: 100%;
-  height: 6rem;
-  background: linear-gradient(to bottom, var(--c1), var(--c2));
-}
-
 .home {
   position: relative;
   min-height: 100vh;
@@ -559,15 +552,6 @@ img {
 .work {
   display: grid;
   overflow: hidden;
-  min-height: 100vh;
-  background-color: var(--body-color-2);
-}
-
-.work2 {
-  display: grid;
-  overflow: hidden;
-  min-height: 100vh;
-  background-color: var(--body-color);
 }
 
 .my-works {
@@ -599,7 +583,7 @@ img {
   position: absolute;
   bottom: 1rem;
   left: 1rem;
-  font-size: var(--h1-font-size);
+  font-size: var(--biggest-font-size);
   color: var(--white-color);
 }
 
@@ -616,7 +600,7 @@ img {
 }
 
 .work__desc {
-  font-size: var(--h2-font-size);
+  font-size: var(--h3-font-size);
   color: var(--white-color);
   margin-bottom: 1rem;
   text-align: center;
@@ -636,7 +620,7 @@ img {
   background-color: rgb(54, 36, 24);
   padding: 0.4rem 0.8rem;
   border-radius: 1rem;
-  font-size: var(--normal-font-size);
+  font-size: var(--small-font-size);
   font-family: "Caveat Brush", cursive;
   color: var(--text-color);
   border: none;
@@ -684,6 +668,12 @@ img {
   padding-inline: 1.5rem;
 }
 
+.other-work-subtitle {
+  font-size: var(--h1-font-size);
+  color: var(--white-color);
+  margin-bottom: 3rem;
+  text-align: center;
+}
 
 .card-list .card-item {
   list-style: none;
@@ -939,7 +929,7 @@ img {
 }
 
 .about-title {
-  font-size: var(--h1-font-size);
+  font-size: var(--biggest-font-size);
   margin-bottom: 1rem;
   text-align: center;
 }
@@ -1367,12 +1357,10 @@ img {
   position: relative;
   min-height: 100vh;
   overflow: hidden;
-
-  display: flex;
-  justify-content: center;
   align-items: center;
 
-  background: linear-gradient(to top, rgb(45, 25, 13) 0%, rgba(45, 25, 13, 0) 40%);
+  background:
+    linear-gradient(to top, rgb(45, 25, 13) 0%, rgba(45, 25, 13, 0) 40%);
 }
 
 /* Fullscreen background video */
@@ -1397,12 +1385,12 @@ img {
   }
 }
 
+/* Your content */
 .work-details .intro {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-
+  padding-top: 10rem;
   position: relative;
   z-index: 2;
 }
@@ -1424,7 +1412,7 @@ img {
 
 
 .work-title {
-  font-size: var(--biggest-font-size);
+  font-size: 3.25rem;
   color: var(--white-color);
   text-transform: uppercase;
   cursor: pointer;
@@ -1812,6 +1800,10 @@ img {
 
   /*=== HOME OTHER WORK ===*/
 
+  .other-work-subtitle {
+    margin-bottom: 1rem;
+  }
+
   .card-wrapper {
     padding-bottom: 1rem;
   }
@@ -1819,7 +1811,7 @@ img {
   /*=== WORK DETAILS ===*/
 
   .work-title {
-    font-size: var(--biggest-font-size);
+    font-size: 1.6rem;
   }
 
   .title-button {
@@ -1873,7 +1865,7 @@ img {
   }
 
   .work-title {
-    font-size: var(--biggest-font-size);
+    font-size: 4.25rem;
   }
 
   .cards-container {
@@ -1884,7 +1876,7 @@ img {
 
 @media screen and (min-width: 768px) {
   :root {
-    --biggest-font-size: 4.25rem;
+    --biggest-font-size: 3.25rem;
   }
 
   /* === HOME === */
@@ -1938,9 +1930,12 @@ img {
   }
 
   .home-title img {
-    max-width: 400px;
+    max-width: 300px;
   }
 
+  .home-description {
+    width: 45%;
+  }
 
   .home-robot {
     display: none;
@@ -2094,8 +2089,8 @@ img {
 
 @media screen and (min-width: 1150px) {
   :root {
-    --biggest-font-size: 6.25rem;
-    --h1-font-size: 3.25rem;
+    --biggest-font-size: 4.25rem;
+    --h1-font-size: 2.25rem;
     --h2-font-size: 1.5rem;
     --h3-font-size: 1.25rem;
     --normal-font-size: 1rem;
@@ -2109,7 +2104,7 @@ img {
   /*=== HOME ===*/
 
   .home-title img {
-    max-width: 550px;
+    max-width: 400px;
   }
 
   /*=== HOME WORK DISPLAY ===*/
@@ -2354,5 +2349,3 @@ img {
     display: none !important;
   }
 }
-
-
