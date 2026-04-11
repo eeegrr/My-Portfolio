@@ -16,12 +16,12 @@
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
   --body-font: "Caveat Brush", cursive;
-  --biggest-font-size: 2.25rem;
-  --h1-font-size: 1.5rem;
-  --h2-font-size: 1.25rem;
-  --h3-font-size: 1rem;
-  --normal-font-size: .938rem;
-  --small-font-size: .813rem;
+  --biggest-font-size: clamp(2.25rem, 5vw, 4.25rem);
+  --h1-font-size: clamp(1.5rem, 3vw, 2.5rem);
+  --h2-font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+  --h3-font-size: clamp(1rem, 2vw, 1.375rem);
+  --normal-font-size: clamp(0.938rem, 1.5vw, 1.125rem);
+  --small-font-size: clamp(0.813rem, 1.2vw, 0.938rem);
 
   /*========== Font weight ==========*/
   --font-italice: 200;
@@ -412,94 +412,6 @@ img {
 .home-description span {
   color: var(--first-color);
   font-weight: var(--font-semi-bold);
-}
-
-/*===== Fireflies in HOME =====*/
-.home {
-  position: relative;
-  overflow: hidden;
-}
-
-.home .fireflies {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 1;
-}
-
-.home .home-text,
-.home .home-title,
-.home .home-description {
-  position: relative;
-  z-index: 2;
-}
-
-.home .firefly {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0.4vw;
-  height: 0.4vw;
-  min-width: 4px;
-  min-height: 4px;
-}
-
-.home .firefly::before,
-.home .firefly::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 50%;
-  transform-origin: -10vw;
-}
-
-.home .firefly::before {
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 70%);
-  opacity: 0.6;
-  filter: blur(2px);
-  animation: firefly-drift linear infinite;
-}
-
-.home .firefly::after {
-  background: radial-gradient(circle, var(--first-color) 0%, transparent 70%);
-  opacity: 0.8;
-  box-shadow: 0 0 2vw 0.4vw var(--first-color);
-  filter: blur(6px);
-  animation: firefly-drift linear infinite, firefly-flash ease-in-out infinite;
-}
-
-
-@keyframes firefly-drift {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes firefly-flash {
-
-  0%,
-  30%,
-  100% {
-    opacity: 0;
-    box-shadow: 0 0 0 0 var(--first-color);
-  }
-
-  5% {
-    opacity: 1;
-    box-shadow: 0 0 2vw 0.4vw var(--first-color);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-
-  .home .firefly::before,
-  .home .firefly::after {
-    animation: none !important;
-  }
 }
 
 /* Scroll button */
@@ -1055,231 +967,236 @@ img {
 
 .contact {
   position: relative;
-  min-height: 100vh;
   overflow: hidden;
+}
+
+.contact.section {
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
 
   background:
     linear-gradient(to bottom, rgb(35, 11, 6) 0%, rgba(35, 11, 6, 0) 50%),
-    url("../img/contact/robot.png") center bottom no-repeat;
+    url("../img/contact/contact-robot.png");
 
-  background-size: cover, auto;
+  background-size: auto 100%;
+  background-position: right center;
+  background-repeat: no-repeat;
 }
 
-/* Layout / container */
-.contact-container {
-  padding-top: 2rem;
-  row-gap: 2rem;
+.contact-image {
+  display: none;
 }
 
-/* Form base */
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
-  max-width: 28rem;
-  margin-inline: auto;
-  background: transparent;
-  z-index: 1;
+.contact-content.container {
+  margin-inline: 0;
+  max-width: none;
+  padding-left: 5rem;
 }
 
-/* Fields */
-.field {
-  display: flex;
-  flex-direction: column;
-  gap: .375rem;
-  position: relative;
+.contact-content {
+  order: 1;
+  text-align: left;
 }
 
-.field--textarea .form-input {
-  min-height: 8rem;
-  resize: none;
-}
-
-/* Inputs */
-.form-input {
-  display: block;
-  width: 100%;
-  box-sizing: border-box;
-  border-radius: .5rem;
-  border: 1px solid var(--white-color);
-  background: var(--body-color);
+.contact-description {
+  font-size: var(--h2-font-size);
   color: var(--white-color);
-  outline: none;
-  padding: .625rem 1rem;
-  font-size: var(--normal-font-size);
-  font: var(--body-font);
+  margin-bottom: 1rem;
 }
 
-.form-input::placeholder {
-  color: rgba(255, 255, 255, 0.35);
-}
-
-.form-input:hover {
-  border-color: rgba(255, 255, 255, .6);
-}
-
-.form-input:focus {
-  border-color: var(--first-color);
-}
-
-/* Error styling */
-.error-txt {
-  display: none;
-  font-size: .8rem;
-  margin-top: .25rem;
-  line-height: 1.1;
-  color: #b01414;
-}
-
-.field.error .error-txt {
-  display: block;
-}
-
-.field.error .form-input {
-  border-color: #b01414;
-}
-
-/* Visual vignette */
-.contact {
-  position: relative;
-  z-index: 0;
-}
-
-
-.contact>* {
-  position: relative;
-  z-index: 1;
-}
-
-/* Success overlay (full-screen, transparent/frosted) */
-#contact-success {
-  position: fixed;
-  inset: 0;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  z-index: 9999;
-  pointer-events: auto;
-  background: rgba(0, 0, 0, 0.15);
-  backdrop-filter: blur(4px) saturate(1.05);
-}
-
-/* Inner frosted card */
-#contact-success .success-card {
-  width: min(520px, 92%);
-  max-width: 560px;
-  padding: 1.25rem;
-  border-radius: 12px;
-  box-shadow: 0 20px 50px rgba(2, 6, 23, 0.6);
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  color: var(--white-color, #fff);
-  text-align: center;
-  transform: translateY(-6px);
-  transition: transform .22s ease, opacity .18s ease;
-  opacity: 0;
-  will-change: transform, opacity;
-}
-
-/* Visible state */
-#contact-success.open {
-  display: flex;
-}
-
-#contact-success.open .success-card {
-  transform: translateY(0);
-  opacity: 1;
-}
-
-/* Typography & button inside overlay */
-#contact-success .success-card h3 {
-  margin: 0 0 .5rem;
-  font-size: var(--h1-font-size);
+.contact-description a {
   color: var(--first-color);
+  font-weight: var(--font-semi-bold);
 }
 
-#contact-success .success-card p {
-  margin: 0 0 1rem;
-  color: var(--white-color);
+.contact-content .section-title {
+  text-align: left;
+  font-size: var(--biggest-font-size);
 }
 
-#contact-success .pop-btn {
-  background: transparent;
-  border: 1px solid var(--body-color);
-  color: var(--white-color);
-  padding: .5rem .75rem;
-  border-radius: 8px;
-  cursor: pointer;
-  font-family: var(--body-font);
-}
+/*===== Fireflies in CONTACT =====*/
 
-#contact-success .pop-btn:hover {
-  background: rgba(255, 255, 255, 0.02);
-}
-
-#contact-success .pop-btn:focus {
-  outline: 2px solid var(--first-color);
-  outline-offset: 3px;
-}
-
-/* Ensure overlay is keyboard-focusable when not hidden */
-#contact-success[aria-hidden="false"] {
-  display: flex;
-}
-
-/*======= eyes =======*/
-
-.contact .eyes {
+.contact .fireflies {
   position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 4rem;
-  justify-content: center;
+  inset: 0;
   pointer-events: none;
-  z-index: 50;
+  z-index: 1;
 }
 
-.contact .eye {
-  position: relative;
-  display: inline-block;
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  background: transparent;
-  overflow: hidden;
+.contact .firefly {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0.4vw;
+  height: 0.4vw;
+  min-width: 4px;
+  min-height: 4px;
 }
 
-/* pupil */
-.contact .eye::after {
+.contact .firefly::before,
+.contact .firefly::after {
   content: "";
   position: absolute;
-  width: 50px;
-  height: 50px;
-  background: var(--white-color);
+  inset: 0;
   border-radius: 50%;
-
-  /* center by default */
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
-  /* offsets controlled from JS */
-  top: calc(50% + var(--pupil-y, 0px));
-  left: calc(50% + var(--pupil-x, 0px));
+  transform-origin: -10vw;
 }
 
-@media (max-width: 768px) {
-  .contact {
+.contact .firefly::before {
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 70%);
+  opacity: 0.6;
+  filter: blur(2px);
+  animation: firefly-drift linear infinite;
+}
+
+.contact .firefly::after {
+  background: radial-gradient(circle, var(--first-color) 0%, transparent 70%);
+  opacity: 0.8;
+  box-shadow: 0 0 2vw 0.4vw var(--first-color);
+  filter: blur(6px);
+  animation: firefly-drift linear infinite, firefly-flash ease-in-out infinite;
+}
+
+.contact-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* firefly positions */
+.contact .firefly:nth-child(1) {
+  top: 10%;
+  left: 15%;
+}
+
+.contact .firefly:nth-child(2) {
+  top: 20%;
+  left: 35%;
+}
+
+.contact .firefly:nth-child(3) {
+  top: 30%;
+  left: 70%;
+}
+
+.contact .firefly:nth-child(4) {
+  top: 50%;
+  left: 25%;
+}
+
+.contact .firefly:nth-child(5) {
+  top: 60%;
+  left: 80%;
+}
+
+.contact .firefly:nth-child(6) {
+  top: 75%;
+  left: 40%;
+}
+
+.contact .firefly:nth-child(7) {
+  top: 80%;
+  left: 10%;
+}
+
+.contact .firefly:nth-child(8) {
+  top: 15%;
+  left: 85%;
+}
+
+.contact .firefly:nth-child(1)::before,
+.contact .firefly:nth-child(1)::after {
+  animation-duration: 14s;
+}
+
+.contact .firefly:nth-child(2)::before,
+.contact .firefly:nth-child(2)::after {
+  animation-duration: 18s;
+}
+
+.contact .firefly:nth-child(3)::before,
+.contact .firefly:nth-child(3)::after {
+  animation-duration: 16s;
+}
+
+.contact .firefly:nth-child(4)::before,
+.contact .firefly:nth-child(4)::after {
+  animation-duration: 20s;
+}
+
+.contact .firefly:nth-child(5)::before,
+.contact .firefly:nth-child(5)::after {
+  animation-duration: 15s;
+}
+
+.contact .firefly:nth-child(6)::before,
+.contact .firefly:nth-child(6)::after {
+  animation-duration: 19s;
+}
+
+.contact .firefly:nth-child(7)::before,
+.contact .firefly:nth-child(7)::after {
+  animation-duration: 17s;
+}
+
+.contact .firefly:nth-child(8)::before,
+.contact .firefly:nth-child(8)::after {
+  animation-duration: 21s;
+}
+
+@media screen and (max-width: 1000px) {
+  .contact.section {
+    min-height: 100vh;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    justify-items: center;
+    align-content: center;
+
     background:
-      linear-gradient(to bottom, rgb(35, 11, 6) 0%, rgba(35, 11, 6, 0) 50%),
-      url("../img/contact/robot-mobile.png") center bottom no-repeat;
-    background-size: cover;
+      linear-gradient(to bottom, rgb(35, 11, 6) 0%, rgba(35, 11, 6, 0.2) 55%, rgba(35, 11, 6, 0) 100%);
+    padding-bottom: 2rem;
   }
 
-  .contact .eyes {
-    display: none;
+  .contact-content.container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    margin-inline: auto;
+    max-width: 100%;
+  }
+
+  .contact-content {
+    text-align: center;
+    width: 100%;
+  }
+
+  .contact-content .section-title {
+    text-align: center;
+  }
+
+  .contact-description {
+    text-align: center;
+  }
+
+  .contact-social {
+    justify-content: center;
+  }
+
+  .contact-image {
+    display: block;
+    width: 80%;
+    position: relative;
+    z-index: 2;
+  }
+
+  .contact-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    margin: 0 auto;
   }
 }
 
@@ -2280,27 +2197,6 @@ img {
 
   .interests-list {
     row-gap: 1.5rem;
-  }
-
-  .contact-container {
-    grid-template-columns: 280px 480px;
-    justify-content: center;
-    align-items: center;
-    column-gap: 8rem;
-  }
-
-  .contact-content {
-    order: -1;
-    text-align: initial;
-    row-gap: 2.5rem;
-  }
-
-  .contact-social {
-    justify-content: initial;
-  }
-
-  .contact-img {
-    width: 480px;
   }
 
   .footer-title {
