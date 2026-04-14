@@ -8,6 +8,9 @@
     <!--=============== REMIXICONS ===============-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" />
 
+    <!--=============== FONT AWESOME ICONS ===============-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
     <!--=============== GOOGLE FONTS ===============-->
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_forward" />
@@ -24,6 +27,7 @@
 
 <body>
     <div class="cursor"></div>
+
     <!--==================== HEADER ====================-->
     <header class="header" id="header">
         <nav class="nav container">
@@ -44,7 +48,6 @@
                     </li>
                 </ul>
 
-                <!-- Close button -->
                 <div class="nav-close" id="nav-close">
                     <i class="ri-close-line"></i>
                 </div>
@@ -58,26 +61,22 @@
         </nav>
     </header>
 
-
-
     <!--========== MAIN ==========-->
     <main class="main" id="top">
 
-        <!--========== MAIN PAGE ==========-->
+        <!--========== HERO / INTRO ==========-->
         <section class="work-details section">
-            <video class="bg-video" autoplay muted loop>
-                <source src="" type="video/mp4" />
-            </video>
-
             <div class="intro container">
+
                 <a href="#" class="title-link" id="title-link">
                     <div class="title-container">
-                        <h2 class="work-title">EtherLocked</h2>
+                        <h2 class="work-title">Project title</h2>
                         <button class="title-button material-symbols-rounded" id="title-button" aria-label="Open">
                             arrow_forward
                         </button>
                     </div>
                 </a>
+
                 <!-- Meta -->
                 <div class="work-meta">
                     <div class="meta-item">
@@ -99,54 +98,10 @@
             </div>
         </section>
 
-        <!-- Templates -->
-        <section class="about-work1 section" data-template="about1">
-            <div class="container">
-                <h2 class="about-subtitle1"></h2>
-                <p class="about-description1"></p>
-                <div class="picture-gallery">
-                    <div class="picture-container"></div>
-                </div>
-            </div>
-        </section>
+        <!--========== DYNAMIC SECTIONS ROOT ==========-->
+        <div id="dynamic-sections"></div>
 
-        <section class="about-work2 section" data-template="about2">
-            <div class="container">
-                <div class="about-box">
-                    <div class="about-text">
-                        <h2 class="about-subtitle2"></h2>
-                        <p class="about-description2"></p>
-                    </div>
-                    <img class="about-picture" alt="">
-                </div>
-                <div class="picture-gallery1">
-                    <div class="picture-container"></div>
-                </div>
-            </div>
-        </section>
-
-        <section class="about-work3 section" data-template="about3">
-            <div class="container">
-                <div class="about-box">
-                    <div class="about-text">
-                        <h2 class="about-subtitle2"></h2>
-                        <p class="about-description2"></p>
-                    </div>
-                    <video class="about-video" autoplay muted loop>
-                        <source src="" type="video/mp4">
-                    </video>
-                </div>
-                <div class="picture-gallery1">
-                    <div class="picture-container"></div>
-                </div>
-            </div>
-        </section>
-
-        <section class="playing-cards section container" data-template="playing-cards">
-            <div class="container"></div>
-        </section>
-
-        <!-- Next project -->
+        <!--========== NEXT PROJECT ==========-->
         <section class="next-work section">
             <div class="container">
                 <h2 class="next-subtitle"></h2>
@@ -188,12 +143,75 @@
         <i class="ri-arrow-up-line"></i>
     </a>
 
-    <!--=============== SWIPER JS ===============-->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <!--=============== TEMPLATES ===============-->
 
-    <!--=============== MAIN JS ===============-->
+    <!-- ===== ABOUT 1 ===== -->
+    <template id="tpl-about1">
+        <section class="about-work1 section">
+            <div class="container">
+                <h2 class="section-title"></h2>
+
+                <div class="about-content1">
+                    <div class="about-left1"></div>
+
+                    <div class="about-right1">
+                        <img src="" alt="" class="about-image1">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <template id="tpl-about1-block">
+        <div class="about-block1">
+            <span class="about-label1"></span>
+            <p class="about-description1"></p>
+        </div>
+    </template>
+
+    <!-- ===== ABOUT 2 ===== -->
+    <template id="tpl-about2">
+        <section class="about-work2 section">
+            <div class="container">
+                <h2 class="section-title"></h2>
+
+                <div class="about-work2__intro">
+                    <span class="about-work2__label"></span>
+                    <p class="about-work2__description"></p>
+                </div>
+
+                <div class="about-work2__main-image">
+                    <img src="" alt="">
+                </div>
+
+                <div class="about-work2__gallery"></div>
+            </div>
+        </section>
+    </template>
+
+    <!-- ===== ABOUT 3 (BIG PROJECTS) ===== -->
+    <template id="tpl-about3">
+        <section class="big-projects section">
+            <div class="container">
+                <h2 class="section-title"></h2>
+                <div class="big-projects-grid"></div>
+            </div>
+        </section>
+    </template>
+
+    <template id="tpl-about3-card">
+        <article class="big-projects-card">
+            <i class="big-projects-card__icon"></i>
+            <h3 class="big-projects-card__title"></h3>
+            <p class="big-projects-card__text"></p>
+        </article>
+    </template>
+
+    <!--=============== SCRIPTS ===============-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/project-page.js"></script>
+
 </body>
 
 </html>
